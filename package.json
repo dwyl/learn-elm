@@ -1,0 +1,8 @@
+{
+  "name": "learn-elm",
+  "version": "0.0.1",
+  "description": "A quick intro tutorial for learning Elm",
+  "dependencies": {
+    "elm": "^0.17.1"
+  }
+}
