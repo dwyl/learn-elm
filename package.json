@@ -4,5 +4,8 @@
   "description": "A quick intro tutorial for learning Elm",
   "dependencies": {
     "elm": "^0.17.1"
+  },
+  "scripts": {
+    "make": ""
   }
 }

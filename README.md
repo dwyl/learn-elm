@@ -106,28 +106,35 @@ we have _condensed_ the steps into the **5-minute** instructions below:
 
 + A **Computer** with:
   + **Node.js _Installed_** (_if you don't already have node get it here_: https://nodejs.org/en/download/ )
-  + **Text Editor** (_any will do but we recommend_: https://atom.io/ _because it has good Elm syntax/plugin support_)
-+ Internet Access (_just so you can install elm_)
-+ Some **JavaScript/Node.js Knowledge** (_ideally you have built a basic Node/JS app before ... but no "major" experience required_)
+  + **Text Editor** (_any will do but we recommend_ https://atom.io/ _because it has good a Elm syntax/plugin_)
++ Internet Access (_just so you can install elm and the modules_)
++ Some **JavaScript/Node.js Knowledge** (_ideally you have built a basic Node/JS app before ...
+  but no "major" experience required/expected_)
 
 ### Quick-Start (_5 Mins_)
 
+Enough talk, let's see an _example_!
+
 #### 1. Clone this repository
 
-On your localhost:
+On your local machine, open a terminal window and run the following command:
 
 ```sh
 git clone https://github.com/dwyl/learn-elm.git && cd learn-eml
 ```
 
-
 #### 2. Install
+
+Install the node.js dependencies (`elm` platform):
 
 ```sh
 npm install
 ```
-Yes, install it _globally_ because it's installing the `elm-compiler` and `elm-platform`
-which you will _want_ to keep up-to-date. also avoid using [`sudo`](http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo)
+> **Note**: We install `elm` (_the `elm' compiler_) _locally_ for the "_quick-start_".
+If you decide to use it for your own project(s), you _can_ install it _globally_.
+
+##### 2.5 Install the Elm Dependencies
+
 
 
 
@@ -140,7 +147,13 @@ http://guide.elm-lang.org/ which is available on Evan's GitHub at: https://githu
 > At the time of writing, the _entire_ "_Official_" guide to Elm (GitBook)
 (_written by the creator of elm and improved by the community_) is ***111 pages***:
 https://www.gitbook.com/book/evancz/an-introduction-to-elm/details
-which means it's readable in a couple of hours. \
+which means it's readable in _less than a day_.
+
+### Intall the Elm Platform _Globally_ on your Computer
+
+Yes, install it _globally_ because it's installing the `elm-compiler` and `elm-platform`
+which you will _want_ to keep up-to-date. also avoid using [`sudo`](http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo)
+as you _really_ should be following the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege).
 
 
 ## Reading
