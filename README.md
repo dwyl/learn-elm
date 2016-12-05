@@ -7,18 +7,23 @@ and raising any issues you find: https://github.com/dwyl/learn-elm/issues
 ## Why?
 
 > It's _difficult_ to _introduce_ elm to someone
-who has _never_ heard of it before without sounding "_evangelical_" ... we've tried our best to be "_objective_", if you spot anything
+who has _never_ heard of it before without sounding "_evangelical_" ... <br />
+we've tried our best to be "_objective_", if you spot anything
 unclear or unexplained, please open an issue: https://github.com/dwyl/learn-elm/issues
 
-Most of us are _already comfortable_ with `JavaScript`
-and it is _still_ the
+_Most_ of us are _already comfortable_ with `JavaScript`
+and it is _still_ (_and will remain_) the
 [_**most popular programming language**_](https://stackoverflow.com/research/developer-survey-2016#technology)
 whereas `elm-lang` is not _even_ on the [_radar_](https://stackoverflow.com/research/developer-survey-2016)
 ... so _**why**_ should we even _consider_ it?
 
-The _reason_ you should be taking `elm` _seriously_ is _**NOT**_ the "_standard_" (_valid_) tech-based arguments:
+The _reason_ you should be taking `elm` _seriously_ is _**NOT**_
+the "_standard_" (_valid_) _tech_-based arguments:
 
-+ "_**Pure**_" _functional style_ means there are fewer (_often zero_) ["_side effects_"]()
++ "[_**Pure**_](https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch3.html)"
+_functional style_ means all your functions are _**predictable**_ and thus _**very testable**_.
++ ***Immutable state*** means there are _fewer_ (_often zero_)
+["_**side effects**_"](http://softwareengineering.stackexchange.com/questions/40297/what-is-a-side-effect)
 + _**Fewer language features**_ [**_lowers_ cognitive load**](https://blog.prototypr.io/design-principles-for-reducing-cognitive-load-84e82ca61abd) when you're reading (_other people's_) code.
 + **_Much_ less to learn** than comparable "Stacks" e.g:
   + **React** + Redux + Flow + Immutable + Babel + all the other setup-code...
@@ -138,7 +143,6 @@ If you decide to use it for your own project(s), you _can_ install it _globally_
 
 
 
-
 ### In-depth Step-by-Step Tutorial (_60mins_)
 
 The _best_ place to start your elm journey is with the "_Official Guide_"
@@ -151,12 +155,20 @@ which means it's readable in _less than a day_.
 
 ### Intall the Elm Platform _Globally_ on your Computer
 
-Yes, install it _globally_ because it's installing the `elm-compiler` and `elm-platform`
-which you will _want_ to keep up-to-date. also avoid using [`sudo`](http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo)
+Yes, install it _globally_ so you get the `elm-compiler` and `elm-platform` which
+allows you to use the `elm-make` command in your terminal:
+
+```js
+npm install elm -g
+```
+
+> avoid using [`sudo`](http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo)
 as you _really_ should be following the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege).
 
 
 ## Reading
+
+### Elm-specific Articles
 
 + How to use Elm at work: http://elm-lang.org/blog/how-to-use-elm-at-work
 (_or work for DWYL where you're actively encouraged to use it!_)
@@ -164,6 +176,17 @@ as you _really_ should be following the [principle of least privilege](https://e
 + How to add Elm to _existing_ JS codebase: http://tech.noredink.com/post/126978281075/walkthrough-introducing-elm-to-a-js-web-app
 + How Elm made our work better (_success story_):
 http://futurice.com/blog/elm-in-the-real-world
+
+### General Functional Programming (background reading)
+
++ Objects Should Be Immutable: http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html
+
+## Videos
+
++ Learning Functional Programming with JavaScript (Anjana Vakil): https://youtu.be/e-5obm1G_FY
++ Functional Programming from First Principles (Erik Meijer): https://youtu.be/a-RAltgH8tw
++ Teaching functional programming to noobs (Rob Martin): https://youtu.be/bmFKEewRRQg
++ Functional Programming is Terrible (Rúnar Bjarnason): https://youtu.be/hzf3hTUKk8U
 
 ### Promising but incomplete:
 + Learn You an `Elm` http://learnyouanelm.github.io/ (_lots of "Todo" items and last updated 2 months ago_)
