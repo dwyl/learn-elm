@@ -22,12 +22,12 @@ the "_standard_" (_valid_) _tech_-based arguments:
 
 + "[_**Pure**_](https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch3.html)"
 _functional style_ means all your functions are _**predictable**_ and thus _**very testable**_.
-+ ***Immutable state*** means there are _fewer_ (_often zero_)
++ [***Immutable state***](http://softwareengineering.stackexchange.com/questions/235558/what-is-state-mutable-state-and-immutable-state) means there are _fewer_ (_often zero_)
 ["_**side effects**_"](http://softwareengineering.stackexchange.com/questions/40297/what-is-a-side-effect)
 + _**Fewer language features**_ [**_lowers_ cognitive load**](https://blog.prototypr.io/design-principles-for-reducing-cognitive-load-84e82ca61abd) when you're reading (_other people's_) code.
 + **_Much_ less to learn** than comparable "Stacks" e.g:
   + **React** + Redux + Flow + Immutable + Babel + all the other setup-code...
-  + **Angular** + Typescript + Babel + ReactiveX + etc. (_bottom line is: elm is `less` to learn_!)
+  + **Angular 2** + Typescript + Babel + ReactiveX + etc. (_bottom line is: elm is `less` to learn_!)
 + _**much faster**_ than React.js or Angular 2 in _all_ "[***benchmarks***](http://elm-lang.org/blog/blazing-fast-html-round-two)"
 + **Built-in ["_Time Travelling_" Debugger](https://www.youtube.com/watch?v=DSjbTC-hvqQ&feature=youtu.be&list=PLglJM3BYAMPH2zuz1nbKHQyeawE4SN0Cd&t=1633)**
  that lets you record and replay actions in a user session (_thus **eliminating** the need for manually writing Selenium/Nightwatch tests!_)
@@ -183,6 +183,7 @@ http://futurice.com/blog/elm-in-the-real-world
 
 ## Videos
 
++ Mutable vs Immutable: https://youtu.be/5qQQ3yzbKp8
 + Learning Functional Programming with JavaScript (Anjana Vakil): https://youtu.be/e-5obm1G_FY
 + Functional Programming from First Principles (Erik Meijer): https://youtu.be/a-RAltgH8tw
 + Teaching functional programming to noobs (Rob Martin): https://youtu.be/bmFKEewRRQg
