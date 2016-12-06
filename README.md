@@ -32,7 +32,7 @@ _functional style_ means all your functions are _**predictable**_ and thus _**ve
 + _**much faster**_ than React.js or Angular 2 in _all_ "[***benchmarks***](http://elm-lang.org/blog/blazing-fast-html-round-two)"
 + **Built-in ["_Time Travelling_" Debugger](https://www.youtube.com/watch?v=DSjbTC-hvqQ&feature=youtu.be&list=PLglJM3BYAMPH2zuz1nbKHQyeawE4SN0Cd&t=1633)**
  that lets you record and replay actions in a user session (_thus **eliminating** the need for manually writing Selenium/Nightwatch tests!_)
-+ _**helpful/friendly compiler**_ that _tells you **exactly**_
++ _**helpful/friendly compiler `error` messages**_ that _tells you **exactly**_
 what is wrong _before_ you attempt to view your app in the browser/device.
 + Evan surveyed the _existing_ web programming languages for his
 University thesis and Elm is the `result` of that study (_borrows ideas from several places and assembles them into a cohesive beautiful package much how Apple made the original iPhone..._)
@@ -41,6 +41,7 @@ The the _reason(s)_ we [@**dwyl**](https://twitter.com/dwylhq) are _exploring_
 the `elm` _ecosystem_ is because it has:
 + _thriving **community** where everyone is welcome_
 + _clear **leadership** from nice + smart people and_
++ _excellent **documentation** (which greatly reduces frustration for beginners)_
 + _a shared **mission** to built the **best** graphical user interfaces for the web!_
 
 these are a _few_ of [our **_favourite_ things**](https://youtu.be/0IagRZBvLtw).
@@ -98,7 +99,7 @@ on a sufficiently large app to `feel` the
 you _might not_ not see the _benefit_ of the `elm` ecosystem ...
 
 But we _urge_ you to consider the list in the "Why?" section (_above_)
-and if _any_ of those items appeals to you, <br />
+and if _any_ of those points appeals to you, <br />
 give elm ***5 minutes*** of your
 time _**today**_ to _try_ the "_**Quick-Start**" below_!
 
@@ -139,11 +140,38 @@ npm install
 > **Note**: We install `elm` (_the `elm' compiler_) _locally_ for the "_quick-start_".
 If you decide to use it for your own project(s), you _can_ install it _globally_.
 
-##### 2.5 Install the Elm Dependencies
+#### 3. Hello {Name}!
+
++ Open the `examples/hello-world.elm` file in your editor.
++ Move your cursor to the 3<sup>rd</sup> line and change `"World!"` to your name!
+
+#### 4. Compile!
+
+Run the `elm-make` command to _compile_ the changes you made in `hello-world.elm`:
 
 ```sh
-npm run install-elm-dependencies
+node_modules/.bin/elm-make examples/hello-world.elm
 ```
+
+> Note if you install elm _globally_ you will be able to type `elm-make`
+without the `node_modules/.bin/` (_relative path_)
+
+
+#### 5. View in Browser
+
+View the result in your web browser by opening the `index.html` file:
+
+![learn-elm-hello-world](https://cloud.githubusercontent.com/assets/194400/20955502/9b07f6f4-bc3b-11e6-8f4d-358f11c6213a.png)
+
+
+#### 6. _Reflect_
+
+You just saw how _easy_ it is to get started with `elm`, how do you `feel`?
+Was it "_difficult_"? Better or _worse_ than you experience learning any other technical concept/tool/language?
+
+Please share your thoughts!
+
+<br />
 
 
 ### In-depth Step-by-Step Tutorial (_60mins_)
@@ -156,7 +184,10 @@ http://guide.elm-lang.org/ which is available on Evan's GitHub at: https://githu
 https://www.gitbook.com/book/evancz/an-introduction-to-elm/details
 which means it's readable in _less than a day_.
 
-### Intall the Elm Platform _Globally_ on your Computer
+
+
+
+### Install the Elm Platform _Globally_ on your Computer
 
 Yes, install it _globally_ so you get the `elm-compiler` and `elm-platform` which
 allows you to use the `elm-make` command in your terminal:
@@ -172,7 +203,6 @@ as you _really_ should be following the [principle of least privilege](https://e
 
 > Help Wanted summarizing the language features!
 > for now see: http://elm-lang.org/docs/syntax
-
 
 
 ## Reading
