@@ -6,6 +6,15 @@
     "elm": "^0.18.0"
   },
   "scripts": {
-    "make": ""
-  }
+    "elm-install": "node_modules/.bin/elm-package install -y",
+    "postinstall": "npm run elm-install",
+    "make": "node_modules/.bin/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwyl/learn-elm.git"
+  },
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/dwyl/learn-elm",
+  "bugs": "https://github.com/dwyl/learn-elm/issues"
 }

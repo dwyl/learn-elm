@@ -8,8 +8,9 @@ and raising any issues you find: https://github.com/dwyl/learn-elm/issues
 
 > It's _difficult_ to _introduce_ elm to someone
 who has _never_ heard of it before without sounding "_evangelical_" ... <br />
-we've tried our best to be "_objective_", if you spot anything
-unclear or unexplained, please open an issue: https://github.com/dwyl/learn-elm/issues
+We've tried our best to be "_objective_" and ***factual***.
+if you spot any inaccuracy or anything
+unclear/unexplained, _please_ help us _improve_ by opening an issue: https://github.com/dwyl/learn-elm/issues
 
 _Most_ of us are _already comfortable_ with `JavaScript`
 and it is _still_ (_and will remain_) the
@@ -17,7 +18,7 @@ and it is _still_ (_and will remain_) the
 whereas `elm-lang` is not _even_ on the [_radar_](https://stackoverflow.com/research/developer-survey-2016)
 ... so _**why**_ should we even _consider_ it?
 
-The _reason_ you should be taking `elm` _seriously_ is _**NOT**_
+The _reason(s)_ you should be considering `elm` are _**NOT**_ (_limited to_)
 the "_standard_" (_valid_) _tech_-based arguments:
 
 + "[_**Pure**_](https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch3.html)"
@@ -36,13 +37,13 @@ what is wrong _before_ you attempt to view your app in the browser/device.
 + Evan surveyed the _existing_ web programming languages for his
 University thesis and Elm is the `result` of that study (_borrows ideas from several places and assembles them into a cohesive beautiful package much how Apple made the original iPhone..._)
 
-The the _reason_ we [@**dwyl**](https://twitter.com/dwylhq) are _exploring_ the `elm` _ecosystem_ is because
-it has:
+The the _reason(s)_ we [@**dwyl**](https://twitter.com/dwylhq) are _exploring_
+the `elm` _ecosystem_ is because it has:
 + _thriving **community** where everyone is welcome_
 + _clear **leadership** from nice + smart people and_
 + _a shared **mission** to built the **best** graphical user interfaces for the web!_
 
-these are a _few_ of [our _favourite_ things](https://youtu.be/0IagRZBvLtw).
+these are a _few_ of [our **_favourite_ things**](https://youtu.be/0IagRZBvLtw).
 
 
 > @rtfeldman put it best in his [**6 Months of Elm in Production** talk](https://youtu.be/R2FtMbb-nLs?t=47m36s) (_which we **highly recommend** watching!_)<br />
@@ -81,7 +82,7 @@ was a _steep_ learning curve, <br />
 _because_ it's _quite_ different from what we were _used_ to
 (_procedural/imperative/mutable_...)
 
-We `found` that the elm language is actually quite small <br />
+We `found` that the elm language is actually really small and focussed<br />
 and when we break it down there are only a handful of concepts <br />
 we need to _understand_ before we can start reading/writing code.
 
@@ -140,7 +141,9 @@ If you decide to use it for your own project(s), you _can_ install it _globally_
 
 ##### 2.5 Install the Elm Dependencies
 
-
+```sh
+npm run install-elm-dependencies
+```
 
 
 ### In-depth Step-by-Step Tutorial (_60mins_)
@@ -164,6 +167,12 @@ npm install elm -g
 
 > avoid using [`sudo`](http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo)
 as you _really_ should be following the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege).
+
+### Language
+
+> Help Wanted summarizing the language features!
+> for now see: http://elm-lang.org/docs/syntax
+
 
 
 ## Reading
