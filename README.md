@@ -184,7 +184,19 @@ http://guide.elm-lang.org/ which is available on Evan's GitHub at: https://githu
 https://www.gitbook.com/book/evancz/an-introduction-to-elm/details
 which means it's readable in _less than a day_.
 
+### Front-end Masters Workshop
 
+It's _not often_ we find a _half-decent_ tutorial on a subject we are trying to learn.
+We were _delighted_ to discover that [**Richard Feldman**](https://github.com/rtfeldman)
+(_one of the `core` contributors to `elm`_) has produced a workshop (_videos + learning materials_)
+for learning `elm`: https://frontendmasters.com/workshops/elm/ + https://github.com/rtfeldman/elm-workshop
+
+While it costs **$39** we think it's an _absolute bargain_!
+
+> **Note** if you have a lack of funds to pay for a _subscription_
+to get access to the workshop, contact us! (_we can help!_)
+
+> `@TODO`: write _comprehensive_ notes on the content in the workshop!
 
 
 ### Install the Elm Platform _Globally_ on your Computer
