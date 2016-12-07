@@ -1,0 +1,20 @@
+{
+  "name": "learn-elm",
+  "version": "0.0.1",
+  "description": "A quick intro tutorial for learning Elm",
+  "dependencies": {
+    "elm": "^0.18.0"
+  },
+  "scripts": {
+    "elm-install": "node_modules/.bin/elm-package install -y",
+    "postinstall": "npm run elm-install",
+    "make": "node_modules/.bin/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwyl/learn-elm.git"
+  },
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/dwyl/learn-elm",
+  "bugs": "https://github.com/dwyl/learn-elm/issues"
+}

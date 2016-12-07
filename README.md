@@ -1,2 +1,244 @@
-# learn-elm
-[WiP] Should you learn elm-lang.org for your next Web App? #HelpWanted (discuss in issues!)
+# learn `elm`
+
+> This tutorial is still a "***Work-in-Progress***" ...
+> please _help_ us by reading through the draft
+and raising any issues you find: https://github.com/dwyl/learn-elm/issues
+
+## Why?
+
+> It's _difficult_ to _introduce_ elm to someone
+who has _never_ heard of it before without sounding "_evangelical_" ... <br />
+We've tried our best to be "_objective_" and ***factual***.
+if you spot any inaccuracy or anything
+unclear/unexplained, _please_ help us _improve_ by opening an issue: https://github.com/dwyl/learn-elm/issues
+
+_Most_ of us are _already comfortable_ with `JavaScript`
+and it is _still_ (_and will remain_) the
+[_**most popular programming language**_](https://stackoverflow.com/research/developer-survey-2016#technology)
+whereas `elm-lang` is not _even_ on the [_radar_](https://stackoverflow.com/research/developer-survey-2016)
+... so _**why**_ should we even _consider_ it?
+
+The _reason(s)_ you should be considering `elm` are _**NOT**_ (_limited to_)
+the "_standard_" (_valid_) _tech_-based arguments:
+
++ "[_**Pure**_](https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch3.html)"
+_functional style_ means all your functions are _**predictable**_ and thus _**very testable**_.
++ [***Immutable state***](http://softwareengineering.stackexchange.com/questions/235558/what-is-state-mutable-state-and-immutable-state) means there are _fewer_ (_often zero_)
+["_**side effects**_"](http://softwareengineering.stackexchange.com/questions/40297/what-is-a-side-effect)
++ _**Fewer language features**_ [**_lowers_ cognitive load**](https://blog.prototypr.io/design-principles-for-reducing-cognitive-load-84e82ca61abd) when you're reading (_other people's_) code.
++ **_Much_ less to learn** than comparable "Stacks" e.g:
+  + **React** + Redux + Flow + Immutable + Babel + all the other setup-code...
+  + **Angular 2** + Typescript + Babel + ReactiveX + etc. (_bottom line is: elm is `less` to learn_!)
++ _**much faster**_ than React.js or Angular 2 in _all_ "[***benchmarks***](http://elm-lang.org/blog/blazing-fast-html-round-two)"
++ **Built-in ["_Time Travelling_" Debugger](https://www.youtube.com/watch?v=DSjbTC-hvqQ&feature=youtu.be&list=PLglJM3BYAMPH2zuz1nbKHQyeawE4SN0Cd&t=1633)**
+ that lets you record and replay actions in a user session (_thus **eliminating** the need for manually writing Selenium/Nightwatch tests!_)
++ _**helpful/friendly compiler `error` messages**_ that _tells you **exactly**_
+what is wrong _before_ you attempt to view your app in the browser/device.
++ Evan surveyed the _existing_ web programming languages for his
+University thesis and Elm is the `result` of that study (_borrows ideas from several places and assembles them into a cohesive beautiful package much how Apple made the original iPhone..._)
+
+The the _reason(s)_ we [@**dwyl**](https://twitter.com/dwylhq) are _exploring_
+the `elm` _ecosystem_ is because it has:
++ _thriving **community** where everyone is welcome_
++ _clear **leadership** from nice + smart people and_
++ _excellent **documentation** (which greatly reduces frustration for beginners)_
++ _a shared **mission** to built the **best** graphical user interfaces for the web!_
+
+these are a _few_ of [our **_favourite_ things**](https://youtu.be/0IagRZBvLtw).
+
+
+> @rtfeldman put it best in his [**6 Months of Elm in Production** talk](https://youtu.be/R2FtMbb-nLs?t=47m36s) (_which we **highly recommend** watching!_)<br />
+"_If you take **two products** and **compare** them on **feature-checklists** <br />
+that gets you a **very inaccurate picture**
+of what it's going to be like to actually **use them**_."
+
+![6-months-of-elm-comparison](https://cloud.githubusercontent.com/assets/194400/20147838/be5d2746-a6a1-11e6-91af-5149c5bf345b.jpg)
+
+
+
+## What?
+
+### `Elm` is a programming language for creating web browser-based graphical user interfaces. Elm is `purely functional`, and is developed with `emphasis` on `usability`, `performance`, and `robustness`. It advertises "`no runtime exceptions` in practice," made possible by the Elm compiler's `static type` checking.
+
+> It's _difficult_ to _overstate_ how _game-changing_ `elm`,
+the `elm-architecture` and `elm-platform` are to web development right now! The fact that Dan Abramov was "_inspired_" by Elm (architecture and debugger) for Redux and React Hot-Reloader
+respectively, should tell you that there's "_something_" here worth exploring ...
+
+### Isn't "Functional Programming" _Difficult_...?
+
+If you `feel` like _**F**unctional **P**rogramming_ is "_complicated_" you aren't _alone_,
+it's a _perfectly normal_ sentiment:
+
+> I _tried_ functional programming in JavaScript before, it was _confusing_...
+
+All we can say to that is:
+
+[![dont-panic](https://cloud.githubusercontent.com/assets/194400/20135968/74ed05d6-a66a-11e6-9f30-f50f911053e6.png)](
+  https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker%27s_Guide_to_the_Galaxy#Don.27t_Panic)
+
+_Trust_ us, the non-mathematician people (_without a Computer Science
+or "Engineering" background_) <br />
+_initially_ `felt` Functional Programming
+was a _steep_ learning curve, <br />
+_because_ it's _quite_ different from what we were _used_ to
+(_procedural/imperative/mutable_...)
+
+We `found` that the elm language is actually really small and focussed<br />
+and when we break it down there are only a handful of concepts <br />
+we need to _understand_ before we can start reading/writing code.
+
+> **Tip**: if you want to _understand_ the core concepts,
+jump to the [Language](#) section below.
+
+## Who?
+
+If you haven't felt the _pain_ of trying to debug/maintain/extend
+code you did not _originally write_, or have not worked
+on a sufficiently large app to `feel` the
+"_fix one thing breaks two other features_" ["_whack-a-mole_"](https://youtu.be/GVJL9oXgsAA),
+you _might not_ not see the _benefit_ of the `elm` ecosystem ...
+
+But we _urge_ you to consider the list in the "Why?" section (_above_)
+and if _any_ of those points appeals to you, <br />
+give elm ***5 minutes*** of your
+time _**today**_ to _try_ the "_**Quick-Start**" below_!
+
+
+## How?
+
+The best place to start is with the "_Official Guide_": http://guide.elm-lang.org/get_started.html <br />
+we have _condensed_ the steps into the **5-minute** instructions below:
+
+### Pre-requisites
+
++ A **Computer** with:
+  + **Node.js _Installed_** (_if you don't already have node get it here_: https://nodejs.org/en/download/ )
+  + **Text Editor** (_any will do but we recommend_ https://atom.io/ _because it has good a Elm syntax/plugin_)
++ Internet Access (_just so you can install elm and the modules_)
++ Some **JavaScript/Node.js Knowledge** (_ideally you have built a basic Node/JS app before ...
+  but no "major" experience required/expected_)
+
+### Quick-Start (_5 Mins_)
+
+Enough talk, let's see an _example_!
+
+#### 1. Clone this repository
+
+On your local machine, open a terminal window and run the following command:
+
+```sh
+git clone https://github.com/dwyl/learn-elm.git && cd learn-eml
+```
+
+#### 2. Install
+
+Install the node.js dependencies (`elm` platform):
+
+```sh
+npm install
+```
+> **Note**: We install `elm` (_the `elm' compiler_) _locally_ for the "_quick-start_".
+If you decide to use it for your own project(s), you _can_ install it _globally_.
+
+#### 3. Hello {Name}!
+
++ Open the `examples/hello-world.elm` file in your editor.
++ Move your cursor to the 3<sup>rd</sup> line and change `"World!"` to your name!
+
+#### 4. Compile!
+
+Run the `elm-make` command to _compile_ the changes you made in `hello-world.elm`:
+
+```sh
+node_modules/.bin/elm-make examples/hello-world.elm
+```
+
+> Note if you install elm _globally_ you will be able to type `elm-make`
+without the `node_modules/.bin/` (_relative path_)
+
+
+#### 5. View in Browser
+
+View the result in your web browser by opening the `index.html` file:
+
+![learn-elm-hello-world](https://cloud.githubusercontent.com/assets/194400/20955502/9b07f6f4-bc3b-11e6-8f4d-358f11c6213a.png)
+
+
+#### 6. _Reflect_
+
+You just saw how _easy_ it is to get started with `elm`, how do you `feel`?
+Was it "_difficult_"? Better or _worse_ than you experience learning any other technical concept/tool/language?
+
+Please share your thoughts!
+
+<br />
+
+
+### In-depth Step-by-Step Tutorial (_60mins_)
+
+The _best_ place to start your elm journey is with the "_Official Guide_"
+http://guide.elm-lang.org/ which is available on Evan's GitHub at: https://github.com/evancz/guide.elm-lang.org
+
+> At the time of writing, the _entire_ "_Official_" guide to Elm (GitBook)
+(_written by the creator of elm and improved by the community_) is ***111 pages***:
+https://www.gitbook.com/book/evancz/an-introduction-to-elm/details
+which means it's readable in _less than a day_.
+
+### Front-end Masters Workshop
+
+It's _not often_ we find a _half-decent_ tutorial on a subject we are trying to learn.
+We were _delighted_ to discover that [**Richard Feldman**](https://github.com/rtfeldman)
+(_one of the `core` contributors to `elm`_) has produced a workshop (_videos + learning materials_)
+for learning `elm`: https://frontendmasters.com/workshops/elm/ + https://github.com/rtfeldman/elm-workshop
+
+While it costs **$39** we think it's an _absolute bargain_!
+
+> **Note** if you have a lack of funds to pay for a _subscription_
+to get access to the workshop, contact us! (_we can help!_)
+
+> `@TODO`: write _comprehensive_ notes on the content in the workshop!
+
+
+### Install the Elm Platform _Globally_ on your Computer
+
+Yes, install it _globally_ so you get the `elm-compiler` and `elm-platform` which
+allows you to use the `elm-make` command in your terminal:
+
+```js
+npm install elm -g
+```
+
+> avoid using [`sudo`](http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo)
+as you _really_ should be following the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege).
+
+### Language
+
+> Help Wanted summarizing the language features!
+> for now see: http://elm-lang.org/docs/syntax
+
+
+## Reading
+
+### Elm-specific Articles
+
++ How to use Elm at work: http://elm-lang.org/blog/how-to-use-elm-at-work
+(_or work for DWYL where you're actively encouraged to use it!_)
++ JavaScript interoperability: https://guide.elm-lang.org/interop/javascript.html
++ How to add Elm to _existing_ JS codebase: http://tech.noredink.com/post/126978281075/walkthrough-introducing-elm-to-a-js-web-app
++ How Elm made our work better (_success story_):
+http://futurice.com/blog/elm-in-the-real-world
+
+### General Functional Programming (background reading)
+
++ Objects Should Be Immutable: http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html
+
+## Videos
+
++ Mutable vs Immutable: https://youtu.be/5qQQ3yzbKp8
++ Learning Functional Programming with JavaScript (Anjana Vakil): https://youtu.be/e-5obm1G_FY
++ Functional Programming from First Principles (Erik Meijer): https://youtu.be/a-RAltgH8tw
++ Teaching functional programming to noobs (Rob Martin): https://youtu.be/bmFKEewRRQg
++ Functional Programming is Terrible (Rúnar Bjarnason): https://youtu.be/hzf3hTUKk8U
+
+### Promising but incomplete:
++ Learn You an `Elm` http://learnyouanelm.github.io/ (_lots of "Todo" items and last updated 2 months ago_)
