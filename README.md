@@ -37,7 +37,7 @@ what is wrong _before_ you attempt to view your app in the browser/device.
 + Evan surveyed the _existing_ web programming languages for his
 University thesis and Elm is the `result` of that study (_borrows ideas from several places and assembles them into a cohesive beautiful package much how Apple made the original iPhone..._)
 
-The the _reason(s)_ we [@**dwyl**](https://twitter.com/dwylhq) are _exploring_
+The _reason(s)_ we [@**dwyl**](https://twitter.com/dwylhq) are _exploring_
 the `elm` _ecosystem_ is because it has:
 + _thriving **community** where everyone is welcome_
 + _clear **leadership** from nice + smart people and_
