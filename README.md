@@ -145,23 +145,25 @@ If you decide to use it for your own project(s), you _can_ install it _globally_
 + Open the `examples/hello-world.elm` file in your editor.
 + Move your cursor to the 3<sup>rd</sup> line and change `"World!"` to your name!
 
-#### 4. Compile!
+#### 4. Server Time!
 
-Run the `elm-make` command to _compile_ the changes you made in `hello-world.elm`:
+Run the `elm-reactor` command to start the _server._
+
+Elm-reactor started the server on your localhost.
 
 ```sh
-node_modules/.bin/elm-make examples/hello-world.elm
+node_modules/.bin/elm-reactor examples/hello-world.elm
 ```
 
-> Note if you install elm _globally_ you will be able to type `elm-make`
+> Note if you install elm _globally_ you will be able to type `elm-reactor`
 without the `node_modules/.bin/` (_relative path_)
 
 
 #### 5. View in Browser
 
-View the result in your web browser by opening the `index.html` file:
+View the entire repository in your web browser by going to http://localhost:8000/
 
-![learn-elm-hello-world](https://cloud.githubusercontent.com/assets/194400/20955502/9b07f6f4-bc3b-11e6-8f4d-358f11c6213a.png)
+Click on _index.html_ to see your Hello World!.
 
 
 #### 6. _Reflect_
