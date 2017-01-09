@@ -127,7 +127,7 @@ Enough talk, let's see an _example_!
 On your local machine, open a terminal window and run the following command:
 
 ```sh
-git clone https://github.com/dwyl/learn-elm.git && cd learn-eml
+git clone https://github.com/dwyl/learn-elm.git && cd learn-elm
 ```
 
 #### 2. Install
@@ -138,12 +138,13 @@ Install the node.js dependencies (`elm` platform):
 npm install
 ```
 > **Note**: We install `elm` (_the `elm' compiler_) _locally_ for the "_quick-start_".
-If you decide to use it for your own project(s), you _can_ install it _globally_.
+If you decide to use it for your own project(s), you _can_ install it _globally_ using
+`npm install -g elm`
 
 #### 3. Hello {Name}!
 
 + Open the `examples/hello-world.elm` file in your editor.
-+ Move your cursor to the 3<sup>rd</sup> line and change `"World!"` to your name!
++ Move your cursor to the 3<sup>rd</sup> line and change `name` to your name!
 
 #### 4. Server Time!
 
@@ -152,7 +153,7 @@ Run the `elm-reactor` command to start the _server._
 Elm-reactor started the server on your localhost.
 
 ```sh
-node_modules/.bin/elm-reactor examples/hello-world.elm
+node_modules/.bin/elm-reactor
 ```
 
 > Note if you install elm _globally_ you will be able to type `elm-reactor`
@@ -163,7 +164,9 @@ without the `node_modules/.bin/` (_relative path_)
 
 View the entire repository in your web browser by going to http://localhost:8000/
 
-Click on _index.html_ to see your Hello World!.
+Click on _example/hello-world.elm_ to see your Hello World! This shows how it
+would compile into `HTML` _without_ having to use `elm-make` (which we'll save
+for later)!
 
 
 #### 6. _Reflect_
