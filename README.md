@@ -254,6 +254,9 @@ all =
             Expect.equal (subtract 10 5) 5
       ]
 ```
+
+More info on testing can be found [here](https://medium.com/@_rchaves_/testing-in-elm-93ad05ee1832#.3i3ibxcxz) and [here](http://package.elm-lang.org/packages/elm-community/elm-test/2.1.0)
+
 ### Circle CI
 
 To set up your elm project on Circle CI, copy over our ```circle.yml``` and ```circle-dependencies.sh``` and follow the instructions on [our Circle CI tutorial](https://github.com/dwyl/learn-circleci)
