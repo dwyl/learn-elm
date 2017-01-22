@@ -1,0 +1,17 @@
+
+machine:
+  node:
+    version: 6.0.0
+
+general:
+  artifacts:
+    - "test"
+
+test:
+  pre:
+    - sh circle-dependencies.sh
+    - npm i -g elm
+
+# using sysconfcpus to speed up elm compiler # See: https://github.com/elm-lang/elm-compiler/issues/1473#issuecomment-245704142
+  override:
+    - ~/dependencies/sysconfcpus/bin/sysconfcpus -n 2 npm test

@@ -221,6 +221,42 @@ as you _really_ should be following the [principle of least privilege](https://e
 > Help Wanted summarizing the language features!
 > for now see: http://elm-lang.org/docs/syntax
 
+## Testing
+Ready to start testing?
+Simply follow these 3 steps:
+
+1) ``` npm i -g elm-test```
+
+2) ``` elm test init ```
+  This will set up your test environment and give you 7 dummy tests in your newly created test folder
+
+3) Run ```elm test``` or the **very nice** ```elm test --watch``` which will re-run your tests as you write them
+
+The general format of the tests are:
+```elm
+describe "Dummy test"
+    [ test "dummy test description" <|
+      \() ->
+        Expect.equal actualValue expectedValue
+    ]
+```
+For example:
+``` elm
+all : Test
+all =
+  describe "My first test"
+      [ test "Addition test works correctly" <|
+        \() ->
+            Expect.equal (2 + 2) 4
+      , test "Our subtraction function works correctly" <|
+        \() ->
+          -- here we are pretending we have a subtract function that takes 2 arguments
+            Expect.equal (subtract 10 5) 5
+      ]
+```
+### Circle CI
+
+To set up your elm project on Circle CI, copy over our ```circle.yml``` and ```circle-dependencies.sh``` and follow the instructions on [our Circle CI tutorial](https://github.com/dwyl/learn-circleci)
 
 ## Reading
 
