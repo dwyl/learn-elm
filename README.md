@@ -106,8 +106,7 @@ time _**today**_ to _try_ the "_**Quick-Start**" below_!
 
 ## How?
 
-The best place to start is with the "_Official Guide_": http://guide.elm-lang.org/get_started.html <br />
-we have _condensed_ the steps into the **5-minute** instructions below:
+The best place to start is with the "_Official Guide_". But we have _condensed_ their "Install" guide into the **5-minute** instructions below:
 
 ### Pre-requisites
 
