@@ -217,6 +217,18 @@ npm install elm -g
 > avoid using [`sudo`](http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo)
 as you _really_ should be following the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege).
 
+### Install Elm Format
+
+There are many things to love about ```elm``` but something you can appreciate right away is elm-format. It's a tool that formats your ```elm``` code so that it is consistent with the community standard format.
+
+**Installation instructions**
+1. Download the current version of elm-format found at https://github.com/avh4/elm-format
+2. Unzip the downloaded file and move the elm-format executable to a location in your PATH variable. If the unzipped file is in your Downloads folder, you could move it with the following terminal command: `mv ~/Downloads/elm-format /usr/local/bin/elm-format`, which will move it to the default path.
+3. Install the elm-format package in your text editor. In Atom, type `apm install elm-format` into the terminal, or install via Packages (filter by `elm`)
+4. Set elm-format to format your work on save. In Atom, Open Settings `CMD + ,` (Linux: `ctrl + ,`), click Packages, filter by 'elm', then click on the elm-format package's settings button. Set the `elm-format` command path setting and ensure the 'format on save' checkbox is selected.
+
+For more advice on `elm` development environment setup: https://github.com/knowthen/elm/blob/master/DEVSETUP.md
+
 ### Language
 
 > Help Wanted summarizing the language features!
