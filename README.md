@@ -158,6 +158,8 @@ node_modules/.bin/elm-reactor
 > Note if you install elm _globally_ you will be able to type `elm-reactor`
 without the `node_modules/.bin/` (_relative path_)
 
+> If you're curious why you're running a server to view the output of your ```elm``` code, it's because ```elm``` is compiled to JavaScript, and it's fiddly to have to compile your code manually every time you want to see the output. With ```elm-reactor``` this is handled for you. Read more about it here: http://elmprogramming.com/elm-reactor.html
+
 
 #### 5. View in Browser
 
