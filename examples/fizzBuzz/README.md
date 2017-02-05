@@ -1,0 +1,1 @@
+# FizzBuzz done in Elm
