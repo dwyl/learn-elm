@@ -1,0 +1,6 @@
+[submodule "examples/fizzBuzz"]
+	path = examples/fizzBuzz
+	url = https://github.com/gabrielperales/fizzbuzz.git
+[submodule "examples/native-modules"]
+	path = examples/native-modules
+	url = https://github.com/gabrielperales/elm-native-module.git
