@@ -213,9 +213,13 @@ allows you to use the `elm-make` command in your terminal:
 ```js
 npm install elm -g
 ```
-
 > avoid using [`sudo`](http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo)
 as you _really_ should be following the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege).
+
+Remember, if you are adding elm to a project which will be deployed on a hosting service (such a heroku) you will need to add elm to the dependencies, in your package.json.
+```js
+npm install elm --save
+```
 
 ### Install Elm Format
 
