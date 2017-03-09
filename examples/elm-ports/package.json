@@ -1,0 +1,16 @@
+{
+  "name": "elm-ports",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "elm-live Main.elm --output=elm.js --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "elm-live": "^2.7.4"
+  }
+}
