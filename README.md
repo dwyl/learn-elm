@@ -278,6 +278,13 @@ More info on testing can be found [here](https://medium.com/@_rchaves_/testing-i
 
 To set up your elm project on Circle CI, copy over our ```circle.yml``` and ```circle-dependencies.sh``` and follow the instructions on [our Circle CI tutorial](https://github.com/dwyl/learn-circleci)
 
+## Flags
+Flags allow you to pass data from Javascript to Elm as part of the initial state of your application.
+
+See our working flags example [here](https://github.com/dwyl/learn-elm/tree/master/examples/elm-flags). Here we pass the URL from Javascript to Elm (via the script tags in our index.html).
+
+Run ```npm install```,```elm-package install``` and ```npm start``` to see the output
+
 ## Reading
 
 ### Elm-specific Articles
