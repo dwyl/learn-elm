@@ -1,0 +1,21 @@
+{
+  "name": "elm-flags-example",
+  "version": "0.0.1",
+  "description": "To watch and compile: ` elm-live Main.elm --output=elm.js --open `",
+  "main": "elm.js",
+  "scripts": {
+    "start": "elm-live Main.elm --output=elm.js --open",
+    "debug": "elm-live Main.elm --output=elm.js --open --debug",
+    "build": "elm-make Main.elm --output=elm.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwyl/learn-elm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dwyl/learn-elm/issues"
+  },
+  "homepage": "https://github.com/dwyl/learn-elm#readme"
+}
