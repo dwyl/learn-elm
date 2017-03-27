@@ -1,0 +1,13 @@
+<!doctype html>
+
+<body>
+    <div id="flags-example"></div>
+    <script src="elm.js"></script>
+    <script>
+      var node = document.querySelector("#flags-example")
+      // the object passed as the second parameter contains the flags passed to our init function
+      Elm.Main.embed(node, {
+          url: window.location.href
+      });
+    </script>
+</body>
