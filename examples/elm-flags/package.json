@@ -5,8 +5,7 @@
   "main": "elm.js",
   "scripts": {
     "start": "elm-live Main.elm --output=elm.js --open",
-    "debug": "elm-live Main.elm --output=elm.js --open --debug",
-    "build": "elm-make Main.elm --output=elm.js"
+    "debug": "elm-live Main.elm --output=elm.js --open --debug"
   },
   "repository": {
     "type": "git",
@@ -17,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/dwyl/learn-elm/issues"
   },
-  "homepage": "https://github.com/dwyl/learn-elm#readme"
+  "homepage": "https://github.com/dwyl/learn-elm#readme",
+  "dependencies": {
+    "elm-live": "^2.7.4"
+  }
 }
