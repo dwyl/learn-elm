@@ -60,6 +60,14 @@ of what it's going to be like to actually **use them**_."
 the `elm-architecture` and `elm-platform` are to web development right now! The fact that Dan Abramov was "_inspired_" by Elm (architecture and debugger) for Redux and React Hot-Reloader
 respectively, should tell you that there's "_something_" here worth exploring ...
 
+### Great Video Intro to Elm (_by Jessic Kerr_)
+
+We _highly_ recommend watching Jessica Kerr's
+"***Adventures in Elm***" from GOTO Conference 2016:
+[![image](https://cloud.githubusercontent.com/assets/194400/22403008/7a878200-e602-11e6-9239-e292fa97c6e1.png)](https://youtu.be/cgXhMc8M4X4)
+
+https://youtu.be/cgXhMc8M4X4
+
 ### Isn't "Functional Programming" _Difficult_...?
 
 If you `feel` like _**F**unctional **P**rogramming_ is "_complicated_" you aren't _alone_,
