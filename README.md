@@ -1,9 +1,5 @@
 # learn `elm`
 
-> This tutorial is still a "***Work-in-Progress***" ...
-> please _help_ us by reading through the draft
-and raising any issues you find: https://github.com/dwyl/learn-elm/issues
-
 ## Why?
 
 > It's _difficult_ to _introduce_ elm to someone
@@ -116,6 +112,18 @@ The best place to start is with the "_Official Guide_". But we have _condensed_ 
 + Internet Access (_just so you can install elm and the modules_)
 + Some **JavaScript/Node.js Knowledge** (_ideally you have built a basic Node/JS app before ...
   but no "major" experience required/expected_)
+
+### _Recommended_ Pre-Elm Learning: Elm Architecture
+
+While it's not a "Pre-requisite",
+we (_highly_) _recommend_ learning/understanding
+**The Elm _Architecture_** ("TEA")
+`before` learning Elm (_the **language**_)
+to _flatten_ the
+["Elm learning curve"](https://github.com/dwyl/learn-elm/issues/45).
+To that end, we wrote an _introductory **step-by-step**_
+tutorial for the Elm Architecture in JavaScript:
+[github.com/dwyl/**learn-elm-architecture**-in-**javascript**](https://github.com/dwyl/learn-elm-architecture-in-javascript)
 
 ### Quick-Start (_5 Mins_)
 
