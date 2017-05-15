@@ -1,9 +1,5 @@
 # learn `elm`
 
-> This tutorial is still a "***Work-in-Progress***" ...
-> please _help_ us by reading through the draft
-and raising any issues you find: https://github.com/dwyl/learn-elm/issues
-
 ## Why?
 
 > It's _difficult_ to _introduce_ elm to someone
@@ -64,6 +60,14 @@ of what it's going to be like to actually **use them**_."
 the `elm-architecture` and `elm-platform` are to web development right now! The fact that Dan Abramov was "_inspired_" by Elm (architecture and debugger) for Redux and React Hot-Reloader
 respectively, should tell you that there's "_something_" here worth exploring ...
 
+### Great Video Intro to Elm (_by Jessic Kerr_)
+
+We _highly_ recommend watching Jessica Kerr's
+"***Adventures in Elm***" from GOTO Conference 2016:
+[![image](https://cloud.githubusercontent.com/assets/194400/22403008/7a878200-e602-11e6-9239-e292fa97c6e1.png)](https://youtu.be/cgXhMc8M4X4)
+
+https://youtu.be/cgXhMc8M4X4
+
 ### Isn't "Functional Programming" _Difficult_...?
 
 If you `feel` like _**F**unctional **P**rogramming_ is "_complicated_" you aren't _alone_,
@@ -116,6 +120,18 @@ The best place to start is with the "_Official Guide_". But we have _condensed_ 
 + Internet Access (_just so you can install elm and the modules_)
 + Some **JavaScript/Node.js Knowledge** (_ideally you have built a basic Node/JS app before ...
   but no "major" experience required/expected_)
+
+### _Recommended_ Pre-Elm Learning: Elm Architecture
+
+While it's not a "Pre-requisite",
+we (_highly_) _recommend_ learning/understanding
+**The Elm _Architecture_** ("TEA")
+`before` learning Elm (_the **language**_)
+to _flatten_ the
+["Elm learning curve"](https://github.com/dwyl/learn-elm/issues/45).
+To that end, we wrote an _introductory **step-by-step**_
+tutorial for the Elm Architecture in JavaScript:
+[github.com/dwyl/**learn-elm-architecture**-in-**javascript**](https://github.com/dwyl/learn-elm-architecture-in-javascript)
 
 ### Quick-Start (_5 Mins_)
 
