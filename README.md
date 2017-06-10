@@ -316,6 +316,12 @@ http://futurice.com/blog/elm-in-the-real-world
 
 + Objects Should Be Immutable: http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html
 
+### Further reading
++ Once you've gotten to grips with making Single Page Apps with Elm, adding routing in can really improve your user's experience! If they're seeing a different `view`, it can make sense for the URL to change as well, so that the user can navigate back to the same view as they please.
+  + Check [this](https://staticapps.org/articles/routing-urls-in-static-apps/) article out for a little more info on routing in Single Page Apps in General
+  + And get started [here](https://www.elm-tutorial.org/en/07-routing/01-intro.html) to learn how to implement it in your Elm app!
+  + The [example](https://github.com/elm-lang/navigation/tree/master/examples) from the _elm-lang/navigation_ repo is super helpful too, the code is nicely commented.
+
 ## Videos
 
 + Mutable vs Immutable: https://youtu.be/5qQQ3yzbKp8
