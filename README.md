@@ -320,7 +320,7 @@ http://futurice.com/blog/elm-in-the-real-world
 + Once you've gotten to grips with making Single Page Apps with Elm, adding routing in can really improve your user's experience! If they're seeing a different `view`, it can make sense for the URL to change as well, so that the user can navigate back to the same view as they please.
   + Check [this article from staticapps.org](https://staticapps.org/articles/routing-urls-in-static-apps/) out for a little more info on routing in Single Page Apps in General
   + And get started [by going to the routing section of the elm-tutorial gitbook](https://www.elm-tutorial.org/en/07-routing/01-intro.html) to learn how to implement it in your Elm app!
-  +  [This example](https://github.com/elm-lang/navigation/tree/master/examples) from the _elm-lang/navigation_ repo is super helpful too.
+  +  [This example](https://github.com/elm-lang/navigation/tree/master/examples) from the _elm-lang/navigation_ github repo is super helpful too.
 
 ## Videos
 
