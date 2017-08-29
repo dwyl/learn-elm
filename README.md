@@ -145,7 +145,7 @@ On your local machine, open a terminal window and run the following command:
 git clone https://github.com/dwyl/learn-elm.git && cd learn-elm
 ```
 
-#### 2. Install
+#### 2. Install
 
 Install the node.js dependencies (`elm` platform):
 
@@ -330,5 +330,5 @@ http://futurice.com/blog/elm-in-the-real-world
 + Teaching functional programming to noobs (Rob Martin): https://youtu.be/bmFKEewRRQg
 + Functional Programming is Terrible (Rúnar Bjarnason): https://youtu.be/hzf3hTUKk8U
 
-### Promising but incomplete:
+### Promising but incomplete:
 + Learn You an `Elm` http://learnyouanelm.github.io/ (_lots of "Todo" items and last updated 2 months ago_)
