@@ -13,6 +13,9 @@ import String
 import Char exposing (isDigit, isUpper, isLower)
 
 
+-- see: http://package.elm-lang.org/packages/elm-lang/core/latest/Char
+
+
 main =
     Html.beginnerProgram
         { model = model
@@ -74,7 +77,7 @@ update msg model =
 
 
 
--- this fn disgusts me
+-- this validation isn't great, can you help improve it?
 
 
 validate : Model -> Validation
