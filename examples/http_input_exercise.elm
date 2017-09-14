@@ -9,7 +9,7 @@ import Json.Decode as Decode
 
 main =
     Html.program
-        { init = init "thundercats"
+        { init = init "awesome"
         , view = view
         , update = update
         , subscriptions = subscriptions
@@ -40,6 +40,7 @@ init topic =
 type Msg
     = MorePlease
     | NewGif (Result Http.Error String)
+    | NewTopic String
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -54,6 +55,9 @@ update msg model =
         NewGif (Err _) ->
             ( model, Cmd.none )
 
+        NewTopic topic ->
+            ( { model | topic = topic }, Cmd.none )
+
 
 
 -- VIEW
@@ -62,8 +66,9 @@ update msg model =
 view : Model -> Html Msg
 view model =
     div []
-        [ h2 [] [ text model.topic ]
-        , button [ onClick MorePlease ] [ text "More Please!" ]
+        [ h2 [] [ text ("Topic: " ++ model.topic) ]
+        , input [ type_ "text", placeholder model.topic, onInput NewTopic ] []
+        , button [ onClick MorePlease ] [ text "Load Gifs!" ]
         , br [] []
         , img [ src model.gifUrl ] []
         ]
