@@ -9,7 +9,7 @@ import Json.Decode as Decode
 
 main =
     Html.program
-        { init = init "thundercats"
+        { init = init "kitten"
         , view = view
         , update = update
         , subscriptions = subscriptions
@@ -56,6 +56,7 @@ update msg model =
 
 
 
+-- https://www.reddit.com/r/elm/comments/5wv2s6/what_does_the_cmdnone_do_in_an_update_statement/
 -- VIEW
 
 
@@ -87,8 +88,11 @@ getRandomGif topic =
     let
         url =
             "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" ++ topic
+
+        request =
+            Http.get url decodeGifUrl
     in
-        Http.send NewGif (Http.get url decodeGifUrl)
+        Http.send NewGif request
 
 
 decodeGifUrl : Decode.Decoder String
