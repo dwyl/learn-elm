@@ -1,3 +1,6 @@
+--  solution to the exercise on https://guide.elm-lang.org/architecture/effects/http.html
+
+
 module Main exposing (..)
 
 import Html exposing (..)
