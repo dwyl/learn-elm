@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html><head><meta charset="UTF-8"><title>Main</title><head>
+<body>
+<div id="spelling"></div>
+<script src="spelling.js"></script>
+<script>
+    var app = Elm.Spelling.fullscreen();
+    app.ports.check.subscribe(function(word) {
+    	console.log(word);
+      var suggestions = spellCheck(word);
+      app.ports.suggestions.send(suggestions);
+    });
+    fruits = []
+    function spellCheck(word) {
+      // You can check on the js console if fruits was updated by elm
+      // typing fruits
+      fruits.push(word);
+      return fruits;
+    }
+</script>
+</body>
+</html>
