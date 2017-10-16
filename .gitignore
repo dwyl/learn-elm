@@ -4,4 +4,5 @@ elm-stuff/
 repl-temp-*
 /index.html
 node_modules
-.DS_storew
+.DS_store
+examples/index.html
