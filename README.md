@@ -5,7 +5,8 @@
 > It's _difficult_ to _introduce_ elm to someone
 who has _never_ heard of it before without sounding "_evangelical_" ... <br />
 We've tried our best to be "_objective_" and ***factual***;
-the _fact_ is that Elm is ***awesome***. Which is why _so many_ JS projects
+the _fact_ is that Elm is ***awesome***. <br />
+Which is why _so many_ JS projects
 have "borrowed" (_shamelessly copied_) it's ideas. (Redux, Immutable.js, etc.)
 <br />
 What you will _discover_ if you _use_ Elm is
@@ -21,7 +22,7 @@ of what it's going to be like to actually **use them**_."
 
 > If anything in `this` guide is unclear/unexplained,
 _please_ help us _improve_ by opening an issue:
-https://github.com/dwyl/learn-elm/issues
+https://github.com/dwyl/learn-elm/issues [![contributions welcome](https://img.shields.io/badge/contributions-welcome!-brightgreen.svg?style=flat)](https://github.com/dwyl/learn-elm/issues)
 
 ### Why _Not_ Just use XYZ JavaScript Framework (_which has similar features_) ?
 
@@ -50,7 +51,7 @@ what is wrong _before_ you attempt to view your app in the browser/device.
 + Evan surveyed the _existing_ web programming languages for his
 University thesis and Elm is the `result` of that study (_borrows ideas from several places and assembles them into a cohesive beautiful package much how Apple made the original iPhone..._)
 
-The _reason(s)_ we [@**dwyl**](https://twitter.com/dwylhq) are _exploring_
+The _reason(s)_ we [@**dwyl**](https://twitter.com/dwylhq) are _using_
 the `elm` _ecosystem_ is because it has:
 + _**beginner-friendly** and thriving **community** where everyone is welcome_
 + _clear **leadership** from nice + smart people and_
