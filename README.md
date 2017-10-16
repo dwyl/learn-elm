@@ -4,9 +4,26 @@
 
 > It's _difficult_ to _introduce_ elm to someone
 who has _never_ heard of it before without sounding "_evangelical_" ... <br />
-We've tried our best to be "_objective_" and ***factual***.
-if you spot any inaccuracy or anything
-unclear/unexplained, _please_ help us _improve_ by opening an issue: https://github.com/dwyl/learn-elm/issues
+We've tried our best to be "_objective_" and ***factual***;
+the _fact_ is that Elm is ***awesome***. Which is why _so many_ JS projects
+have "borrowed" (_shamelessly copied_) it's ideas. (Redux, Immutable.js, etc.)
+<br />
+What you will _discover_ if you _use_ Elm is
+that the JS imitation(s) don't come _close_ to the simplicity,
+elegance and _reliability_ of Elm!
+
+> @rtfeldman put it best in his [**6 Months of Elm in Production** talk](https://youtu.be/R2FtMbb-nLs?t=47m36s) (_which we **highly recommend** watching!_)<br />
+"_If you take **two products** and **compare** them on **feature-checklists** <br />
+that gets you a **very inaccurate picture**
+of what it's going to be like to actually **use them**_."
+
+![6-months-of-elm-comparison](https://cloud.githubusercontent.com/assets/194400/20147838/be5d2746-a6a1-11e6-91af-5149c5bf345b.jpg)
+
+> If anything in `this` guide is unclear/unexplained,
+_please_ help us _improve_ by opening an issue:
+https://github.com/dwyl/learn-elm/issues
+
+### Why _Not_ Just use XYZ JavaScript Framework (_which has similar features_) ?
 
 _Most_ of us are _already comfortable_ with `JavaScript`
 and it is _still_ (_and will remain_) the
@@ -14,18 +31,18 @@ and it is _still_ (_and will remain_) the
 whereas `elm-lang` is not _even_ on the [_radar_](https://stackoverflow.com/research/developer-survey-2016)
 ... so _**why**_ should we even _consider_ it?
 
-The _reason(s)_ you should be considering `elm` are _**NOT**_ (_limited to_)
-the "_standard_" (_valid_) _tech_-based arguments:
+There are _many_ "_technical_" reasons for using Elm:
 
 + "[_**Pure**_](https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch3.html)"
-_functional style_ means all your functions are _**predictable**_ and thus _**very testable**_.
+_functional style_ means all your functions are _**predictable**_ and thus _**very reliable**_. <br />
+No surprises even when you are working with a distributed team of dozens of people!
 + [***Immutable state***](http://softwareengineering.stackexchange.com/questions/235558/what-is-state-mutable-state-and-immutable-state) means there are _fewer_ (_often zero_)
 ["_**side effects**_"](http://softwareengineering.stackexchange.com/questions/40297/what-is-a-side-effect)
 + _**Fewer language features**_ [**_lowers_ cognitive load**](https://blog.prototypr.io/design-principles-for-reducing-cognitive-load-84e82ca61abd) when you're reading (_other people's_) code.
 + **_Much_ less to learn** than comparable "Stacks" e.g:
   + **React** + Redux + Flow + Immutable + Babel + all the other setup-code...
   + **Angular 2** + Typescript + Babel + ReactiveX + etc. (_bottom line is: elm is `less` to learn_!)
-+ _**much faster**_ than React.js or Angular 2 in _all_ "[***benchmarks***](http://elm-lang.org/blog/blazing-fast-html-round-two)"
++ _**Much faster**_ than React.js or Angular 2 in _all_ ["***benchmarks***"](http://elm-lang.org/blog/blazing-fast-html-round-two)
 + **Built-in ["_Time Travelling_" Debugger](https://www.youtube.com/watch?v=DSjbTC-hvqQ&feature=youtu.be&list=PLglJM3BYAMPH2zuz1nbKHQyeawE4SN0Cd&t=1633)**
  that lets you record and replay actions in a user session (_thus **eliminating** the need for manually writing Selenium/Nightwatch tests!_)
 + _**helpful/friendly compiler `error` messages**_ that _tells you **exactly**_
@@ -35,21 +52,12 @@ University thesis and Elm is the `result` of that study (_borrows ideas from sev
 
 The _reason(s)_ we [@**dwyl**](https://twitter.com/dwylhq) are _exploring_
 the `elm` _ecosystem_ is because it has:
-+ _thriving **community** where everyone is welcome_
++ _**beginner-friendly** and thriving **community** where everyone is welcome_
 + _clear **leadership** from nice + smart people and_
 + _excellent **documentation** (which greatly reduces frustration for beginners)_
 + _a shared **mission** to built the **best** graphical user interfaces for the web!_
 
 these are a _few_ of [our **_favourite_ things**](https://youtu.be/0IagRZBvLtw).
-
-
-> @rtfeldman put it best in his [**6 Months of Elm in Production** talk](https://youtu.be/R2FtMbb-nLs?t=47m36s) (_which we **highly recommend** watching!_)<br />
-"_If you take **two products** and **compare** them on **feature-checklists** <br />
-that gets you a **very inaccurate picture**
-of what it's going to be like to actually **use them**_."
-
-![6-months-of-elm-comparison](https://cloud.githubusercontent.com/assets/194400/20147838/be5d2746-a6a1-11e6-91af-5149c5bf345b.jpg)
-
 
 
 ## What?
