@@ -334,3 +334,5 @@ http://futurice.com/blog/elm-in-the-real-world
 
 ### Promising but incomplete:
 + Learn You an `Elm` http://learnyouanelm.github.io/ (_lots of "Todo" items and last updated 2 months ago_)
+
+[![HitCount](http://hits.dwyl.io/dwyl/learn-elm.svg)](http://hits.dwyl.io/dwyl/learn-elm)
