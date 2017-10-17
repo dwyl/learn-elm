@@ -9,9 +9,6 @@ the _fact_ is that Elm is ***awesome***. <br />
 Which is why _so many_ JS projects
 have "borrowed" (_shamelessly copied_) it's ideas. (Redux, Immutable.js, etc.)
 <br />
-What you will _discover_ if you _use_ Elm is
-that the JS imitation(s) don't come _close_ to the simplicity,
-elegance and _reliability_ of Elm!
 
 > @rtfeldman put it best in his [**6 Months of Elm in Production** talk](https://youtu.be/R2FtMbb-nLs?t=47m36s) (_which we **highly recommend** watching!_)<br />
 "_If you take **two products** and **compare** them on **feature-checklists** <br />
