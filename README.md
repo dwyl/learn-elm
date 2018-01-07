@@ -98,7 +98,7 @@ and when we break it down there are only a handful of concepts <br />
 we need to _understand_ before we can start reading/writing code.
 
 > **Tip**: if you want to _understand_ the core concepts,
-jump to the [Language](#) section below.
+jump to the [Language](#language) section below.
 
 ## Who?
 
