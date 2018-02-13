@@ -53,7 +53,7 @@ the `elm` _ecosystem_ is because it has:
 + _**beginner-friendly** and thriving **community** where everyone is welcome_
 + _clear **leadership** from nice + smart people and_
 + _excellent **documentation** (which greatly reduces frustration for beginners)_
-+ _a shared **mission** to built the **best** graphical user interfaces for the web!_
++ _a shared **mission** to build the **best** graphical user interfaces for the web!_
 
 these are a _few_ of [our **_favourite_ things**](https://youtu.be/0IagRZBvLtw).
 
