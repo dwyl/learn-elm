@@ -1,5 +1,7 @@
 # learn `elm`
 
+[![HitCount](http://hits.dwyl.io/dwyl/learn-elm.svg)](http://hits.dwyl.io/dwyl/learn-elm)
+
 ## Why?
 
 > It's _difficult_ to _introduce_ elm to someone
