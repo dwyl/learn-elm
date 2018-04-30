@@ -137,7 +137,7 @@ to _flatten_ the
 ["Elm learning curve"](https://github.com/dwyl/learn-elm/issues/45).
 To that end, we wrote an _introductory **step-by-step**_
 tutorial for the Elm Architecture in JavaScript:
-[github.com/dwyl/**learn-elm-architecture**-in-**javascript**](https://github.com/dwyl/learn-elm-architecture-in-javascript)
+[https://github.com/dwyl/**learn-elm-architecture**-in-**javascript**](https://github.com/dwyl/learn-elm-architecture-in-javascript)
 
 ### Quick-Start (_5 Mins_)
 
