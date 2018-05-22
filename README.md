@@ -35,26 +35,26 @@ _functional style_ means all your functions are _**predictable**_ and thus _**ve
 No surprises even when you are working with a distributed team of dozens of people!
 + [***Immutable state***](http://softwareengineering.stackexchange.com/questions/235558/what-is-state-mutable-state-and-immutable-state) means there are _fewer_ (_often zero_)
 ["_**side effects**_"](http://softwareengineering.stackexchange.com/questions/40297/what-is-a-side-effect)
-+ _**Fewer language features**_ [**_lowers_ cognitive load**](https://blog.prototypr.io/design-principles-for-reducing-cognitive-load-84e82ca61abd) when you're reading (_other people's_) code.
++ _**Fewer language features**_ [**_lowers_ cognitive load**](https://blog.prototypr.io/design-principles-for-reducing-cognitive-load-84e82ca61abd) when you're reading (_other people's_) code
 + **_Much_ less to learn** than comparable "Stacks" e.g:
-  + **React** + Redux + Flow + Immutable + Babel + all the other setup-code...
+  + **React** + Redux + Flow + Immutable + Babel + all the other setup code...
   + **Angular 2** + Typescript + Babel + ReactiveX + etc. (_bottom line is: elm is `less` to learn_!)
 + _**Much faster**_ than React.js or Angular 2 in _all_ ["***benchmarks***"](http://elm-lang.org/blog/blazing-fast-html-round-two)
 + **Built-in ["_Time Travelling_" Debugger](https://www.youtube.com/watch?v=DSjbTC-hvqQ&feature=youtu.be&list=PLglJM3BYAMPH2zuz1nbKHQyeawE4SN0Cd&t=1633)**
  that lets you record and replay actions in a user session (_thus **eliminating** the need for manually writing Selenium/Nightwatch tests!_)
-+ _**helpful/friendly compiler `error` messages**_ that _tells you **exactly**_
++ _**Helpful/friendly compiler `error` messages**_ that _tells you **exactly**_
 what is wrong _before_ you attempt to view your app in the browser/device.
 + Evan surveyed the _existing_ web programming languages for his
 University thesis and Elm is the `result` of that study (_borrows ideas from several places and assembles them into a cohesive beautiful package much how Apple made the original iPhone..._)
 
-The _reason(s)_ we [@**dwyl**](https://twitter.com/dwylhq) are _using_
+The _reason(s)_ we [@**dwyl**](https://twitter.com/dwyl) are _using_
 the `elm` _ecosystem_ is because it has:
 + _**beginner-friendly** and thriving **community** where everyone is welcome_
 + _clear **leadership** from nice + smart people and_
 + _excellent **documentation** (which greatly reduces frustration for beginners)_
 + _a shared **mission** to build the **best** graphical user interfaces for the web!_
 
-these are a _few_ of [our **_favourite_ things**](https://youtu.be/0IagRZBvLtw).
+These are a _few_ of [our **_favourite_ things**](https://youtu.be/0IagRZBvLtw).
 
 
 ## What?
@@ -90,9 +90,9 @@ or "Engineering" background_) <br />
 _initially_ `felt` Functional Programming
 was a _steep_ learning curve, <br />
 _because_ it's _quite_ different from what we were _used_ to
-(_procedural/imperative/mutable_...)
+(_procedural/imperative/mutable_...).
 
-We `found` that the elm language is actually really small and focussed<br />
+We `found` that the elm language is actually really _small and focussed_<br />
 and when we break it down there are only a handful of concepts <br />
 we need to _understand_ before we can start reading/writing code.
 
@@ -121,10 +121,10 @@ The best place to start is with the "_Official Guide_". But we have _condensed_ 
 
 + A **Computer** with:
   + **Node.js _Installed_** (_if you don't already have node get it here_: https://nodejs.org/en/download/ )
-  + **Text Editor** (_any will do but we recommend_ https://atom.io/ _because it has good a Elm syntax/plugin_)
+  + **Text Editor** (_any will do but we recommend_ https://atom.io/ _because it has good Elm syntax/plugins_)
 + Internet Access (_just so you can install elm and the modules_)
-+ Some **JavaScript/Node.js Knowledge** (_ideally you have built a basic Node/JS app before ...
-  but no "major" experience required/expected_)
++ Some **JavaScript/Node.js Knowledge** (_ideally you have built a basic Node/JS app before,
+but no "major" experience required/expected_)
 
 ### _Recommended_ Pre-Elm Learning: Elm Architecture
 
