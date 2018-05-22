@@ -25,8 +25,7 @@ https://github.com/dwyl/learn-elm/issues [![contributions welcome](https://img.s
 
 _Most_ of us are _already comfortable_ with `JavaScript`
 and it is _still_ (_and will remain_) the
-[_**most popular programming language**_](https://stackoverflow.com/research/developer-survey-2016#technology)
-whereas `elm-lang` is not _even_ on the [_radar_](https://stackoverflow.com/research/developer-survey-2016)
+[_**most popular programming language**_](https://insights.stackoverflow.com/survey/2018/#technology-programming-scripting-and-markup-languages)
 ... so _**why**_ should we even _consider_ it?
 
 There are _many_ "_technical_" reasons for using Elm:
