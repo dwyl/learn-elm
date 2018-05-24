@@ -211,7 +211,7 @@ http://guide.elm-lang.org/ which is available on Evan's GitHub at: https://githu
 https://www.gitbook.com/book/evancz/an-introduction-to-elm/details
 which means it's readable in _less than a day_.
 
-### Front-end Masters Workshop
+### Frontend Masters Workshop
 
 It's _not often_ we find a _half-decent_ tutorial on a subject we are trying to learn.
 We were _delighted_ to discover that [**Richard Feldman**](https://github.com/rtfeldman)
@@ -244,7 +244,7 @@ npm install elm --save
 
 ### Install Elm Format
 
-There are many things to love about ```elm``` but something you can appreciate right away is elm-format. It's a tool that formats your ```elm``` code so that it is consistent with the community standard format.
+There are many things to love about ```elm``` but something you can appreciate right away is `elm-format`. It's a tool that formats your ```elm``` code so that it is consistent with the community standard format.
 
 **Installation instructions**
 1. Download the current version of elm-format found at https://github.com/avh4/elm-format
@@ -293,18 +293,20 @@ all =
       ]
 ```
 
-More info on testing can be found [here](https://medium.com/@_rchaves_/testing-in-elm-93ad05ee1832#.3i3ibxcxz) and [here](http://package.elm-lang.org/packages/elm-community/elm-test/2.1.0)
+More info on testing can be found [here](https://medium.com/@_rchaves_/testing-in-elm-93ad05ee1832#.3i3ibxcxz) and [here](http://package.elm-lang.org/packages/elm-community/elm-test/2.1.0).
 
 ### Circle CI
 
-To set up your elm project on Circle CI, copy over our ```circle.yml``` and ```circle-dependencies.sh``` and follow the instructions on [our Circle CI tutorial](https://github.com/dwyl/learn-circleci)
+To set up your elm project on Circle CI, copy over our ```circle.yml``` and ```circle-dependencies.sh``` and follow the instructions on [our Circle CI tutorial](https://github.com/dwyl/learn-circleci).
 
 ## Flags
 Flags allow you to pass data from Javascript to Elm as part of the initial state of your application.
 
-See our working flags example [here](https://github.com/dwyl/learn-elm/tree/master/examples/elm-flags). Here we pass the URL from Javascript to Elm (via the script tags in our index.html).
+See our [working flags example](https://github.com/dwyl/learn-elm/tree/master/examples/elm-flags).
+Here we pass the URL from Javascript to Elm (via the script tags in our `index.html`).
 
-Run ```npm install```,```elm-package install``` and ```npm start``` to see the output
+Run ```npm install```,```elm-package install``` and ```npm start```
+to see the output.
 
 ## Reading
 
