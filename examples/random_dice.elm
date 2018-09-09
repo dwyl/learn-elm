@@ -1,13 +1,14 @@
 module Main exposing (..)
 
+import Browser
 import Html exposing (..)
-import Html.Events exposing (..)
 import Html.Attributes exposing (..)
+import Html.Events exposing (..)
 import Random
 
 
 main =
-    Html.program
+    Browser.element
         { init = init
         , view = view
         , update = update
@@ -29,8 +30,8 @@ type alias Model =
     }
 
 
-init : ( Model, Cmd Msg )
-init =
+init : () -> ( Model, Cmd Msg )
+init _ =
     ( Model 1 1, Cmd.none )
 
 
@@ -48,7 +49,7 @@ view model =
 
 
 makeSrcUrl num =
-    "./images/dice_" ++ (toString num) ++ ".jpg"
+    "./images/dice_" ++ String.fromInt num ++ ".jpg"
 
 
 

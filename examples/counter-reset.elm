@@ -1,33 +1,40 @@
 -- Read more about this program in the official Elm guide:
 -- https://guide.elm-lang.org/architecture/user_input/buttons.html
 
-import Html exposing (beginnerProgram, div, button, text)
+
+module Main exposing (..)
+
+import Browser
+import Html exposing (Html, button, div, text)
 import Html.Events exposing (onClick)
 
 
 main =
-  beginnerProgram { model = 0, view = view, update = update }
+    Browser.sandbox { init = 0, update = update, view = view }
 
 
 view model =
-  div []
-    [ button [ onClick Decrement ] [ text "-" ]
-    , div [] [ text (toString model) ]
-    , button [ onClick Increment ] [ text "+" ]
-    , button [ onClick Reset ] [ text "Reset" ]
-    ]
+    div []
+        [ button [ onClick Increment ] [ text "+" ]
+        , div [] [ text (String.fromInt model) ]
+        , button [ onClick Decrement ] [ text "-" ]
+        , button [ onClick Reset ] [ text "Reset" ]
+        ]
 
 
-type Msg = Increment | Decrement | Reset
+type Msg
+    = Increment
+    | Decrement
+    | Reset
 
 
 update msg model =
-  case msg of
-    Increment ->
-      model + 1
+    case msg of
+        Increment ->
+            model + 1
 
-    Decrement ->
-      model - 1
+        Decrement ->
+            model - 1
 
-    Reset ->
-      0
+        Reset ->
+            0

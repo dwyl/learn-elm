@@ -5,20 +5,20 @@
 
 module Main exposing (..)
 
-import Html exposing (..)
-import Html as Html
+import Browser
+import Char exposing (isDigit, isLower, isUpper)
+import Html as Html exposing (..)
 import Html.Attributes exposing (..)
-import Html.Events exposing (onInput, onClick)
+import Html.Events exposing (onClick, onInput)
 import String
-import Char exposing (isDigit, isUpper, isLower)
 
 
 -- see: http://package.elm-lang.org/packages/elm-lang/core/latest/Char
 
 
 main =
-    Html.beginnerProgram
-        { model = model
+    Browser.sandbox
+        { init = init
         , view = view
         , update = update
         }
@@ -39,8 +39,8 @@ type alias Model =
     }
 
 
-model : Model
-model =
+init : Model
+init =
     { name = ""
     , password = ""
     , pwAgain = ""
@@ -130,4 +130,4 @@ viewValidation model =
                 None ->
                     ( "black", "Enter your details" )
     in
-        div [ style [ ( "color", color ) ] ] [ text message ]
+    div [ style "color" color ] [ text message ]
