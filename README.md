@@ -10,9 +10,13 @@ Which is why _so many_ JS projects
 have "borrowed" (_shamelessly copied_) it's ideas. (Redux, Immutable.js, etc.)
 <br />
 
-> @rtfeldman put it best in his [**6 Months of Elm in Production** talk](https://youtu.be/R2FtMbb-nLs?t=47m36s) (_which we **highly recommend** watching!_)<br />
-"_If you take **two products** and **compare** them on **feature-checklists** <br />
-that gets you a **very inaccurate picture**
+> @rtfeldman put it best in his
+[**6 Months of Elm in Production** talk](https://youtu.be/R2FtMbb-nLs?t=47m36s)
+(_which we **highly recommend** watching!_)<br />
+"_If you take **two products** and **compare**them
+on **feature-checklists**
+that gets you <br />
+a **very inaccurate picture**
 of what it's going to be like to actually **use them**_."
 
 ![6-months-of-elm-comparison](https://cloud.githubusercontent.com/assets/194400/20147838/be5d2746-a6a1-11e6-91af-5149c5bf345b.jpg)
@@ -31,28 +35,40 @@ and it is _still_ (_and will remain_) the
 There are _many_ "_technical_" reasons for using Elm:
 
 + "[_**Pure**_](https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch3.html)"
-_functional style_ means all your functions are _**predictable**_ and thus _**very reliable**_. <br />
-No surprises even when you are working with a distributed team of dozens of people!
+_functional style_ means all your functions are _**predictable**_
+and thus _**very reliable**_. <br />
+No surprises even when you are working with
+a distributed team of dozens of people!
 + [***Immutable state***](http://softwareengineering.stackexchange.com/questions/235558/what-is-state-mutable-state-and-immutable-state) means there are _fewer_ (_often zero_)
 ["_**side effects**_"](http://softwareengineering.stackexchange.com/questions/40297/what-is-a-side-effect)
-+ _**Fewer language features**_ [**_lowers_ cognitive load**](https://blog.prototypr.io/design-principles-for-reducing-cognitive-load-84e82ca61abd) when you're reading (_other people's_) code
++ _**Fewer language features**_
+[**_lowers_ cognitive load**](https://blog.prototypr.io/design-principles-for-reducing-cognitive-load-84e82ca61abd)
+when you're reading (_other people's_) code
 + **_Much_ less to learn** than comparable "Stacks" e.g:
   + **React** + Redux + Flow + Immutable + Babel + all the other setup code...
-  + **Angular 2** + Typescript + Babel + ReactiveX + etc. (_bottom line is: elm is `less` to learn_!)
+  + **Angular 2** + Typescript + Babel + ReactiveX + etc.
+  (_bottom line is: elm is `less` to learn_!)
 + _**Much faster**_ than React.js or Angular 2 in _all_ ["***benchmarks***"](http://elm-lang.org/blog/blazing-fast-html-round-two)
 + **Built-in ["_Time Travelling_" Debugger](https://www.youtube.com/watch?v=DSjbTC-hvqQ&feature=youtu.be&list=PLglJM3BYAMPH2zuz1nbKHQyeawE4SN0Cd&t=1633)**
- that lets you record and replay actions in a user session (_thus **eliminating** the need for manually writing Selenium/Nightwatch tests!_)
-+ _**Helpful/friendly compiler `error` messages**_ that _tells you **exactly**_
-what is wrong _before_ you attempt to view your app in the browser/device.
+ that lets you record and replay actions in a user session
+ (_thus **eliminating** the need for manually
+   writing Selenium/Nightwatch tests!_)
++ _**Helpful/friendly compiler `error` messages**_ that _inform you **exactly**_
+what is wrong (_during compilation_) _before_ you attempt
+to view your app in the browser/device.
 + Evan surveyed the _existing_ web programming languages for his
-University thesis and Elm is the `result` of that study (_borrows ideas from several places and assembles them into a cohesive beautiful package much how Apple made the original iPhone..._)
+University thesis and Elm is the `result` of that study
+(_borrows ideas from several places and assembles them
+  into a cohesive beautiful package much how Apple made the original iPhone..._)
 
 The _reason(s)_ we [@**dwyl**](https://twitter.com/dwyl) are _using_
 the `elm` _ecosystem_ is because it has:
 + _**beginner-friendly** and thriving **community** where everyone is welcome_
 + _clear **leadership** from nice + smart people and_
-+ _excellent **documentation** (which greatly reduces frustration for beginners)_
-+ _a shared **mission** to build the **best** graphical user interfaces for the web!_
++ _excellent **documentation**
+(which greatly reduces frustration for beginners)_
++ _a shared **mission** to build the **best**
+graphical user interfaces for the web!_
 
 These are a _few_ of [our **_favourite_ things**](https://youtu.be/0IagRZBvLtw).
 
@@ -75,7 +91,8 @@ https://youtu.be/cgXhMc8M4X4
 
 ### Isn't "Functional Programming" _Difficult_...?
 
-If you `feel` like _**F**unctional **P**rogramming_ is "_complicated_" you aren't _alone_,
+If you **`feel`** like _**F**unctional **P**rogramming_
+is "_complicated_" you aren't _alone_,
 it's a _perfectly normal_ sentiment:
 
 > I _tried_ functional programming in JavaScript before, it was _confusing_...
@@ -85,14 +102,15 @@ All we can say to that is:
 [![dont-panic](https://cloud.githubusercontent.com/assets/194400/20135968/74ed05d6-a66a-11e6-9f30-f50f911053e6.png)](
   https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker%27s_Guide_to_the_Galaxy#Don.27t_Panic)
 
-_Trust_ us, the non-mathematician people (_without a Computer Science
-or "Engineering" background_) <br />
-_initially_ `felt` Functional Programming
-was a _steep_ learning curve, <br />
+Fear not, we have witnessed _many_ non-mathematician people
+(_without a Computer Science
+or "Engineering" background_) learning Elm "from scratch"
+and while some _initially_ **`felt`** that Functional Programming
+was a _steep_ learning curve,
 _because_ it's _quite_ different from what we were _used_ to
 (_procedural/imperative/mutable_...).
 
-We `found` that the elm language is actually really _small and focussed_<br />
+We **`found`** that the Elm language is actually really _small and focussed_<br />
 and when we break it down there are only a handful of concepts <br />
 we need to _understand_ before we can start reading/writing code.
 
