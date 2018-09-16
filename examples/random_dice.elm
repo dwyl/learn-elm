@@ -32,7 +32,7 @@ type alias Model =
 
 init : () -> ( Model, Cmd Msg )
 init _ =
-    ( Model 1 1, Cmd.none )
+    ( Model 4 2, Cmd.none )
 
 
 
