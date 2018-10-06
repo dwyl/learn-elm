@@ -6,3 +6,4 @@ repl-temp-*
 node_modules
 .DS_store
 examples/index.html
+elm-architecture-tutorial/
