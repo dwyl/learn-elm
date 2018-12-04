@@ -59,16 +59,19 @@ This guide help us to define our requirements for the package:
 - The user can reset the filters by clicking on the "x" button
 
 
-
 # How
 
 1. Create the package (ie create **documentation**, test and code)
 2. Publish the package
 3. Use the package
 
-## Initialise the package
+## Minimum setup
 
-First we need to initialise our new package. Run the command `elm init`, this will create a `src` folder and the `elm.json` file.
+### Initialise the package
+
+**Elm is using Github to name and publish packages. So the first step when creating a new package is to create a new Github repository.**
+
+Then we can initialise our new Elm package with the command `elm init`, this will create a `src` folder and a `elm.json` file.
 This json file contains the description of our new project (name, author, version, dependencies,...). See https://elm-lang.org/0.19.0/init
 to get more informaiton on how to create a new project.
 
@@ -78,7 +81,7 @@ As we are creating a package that will be `import`ed in other projects and not a
 
 
 So the `elm.json` file should have the following format:
-```
+```json
 {
     "type": "package",
     "name": "dwyl/dropdown-filters",
@@ -98,3 +101,95 @@ So the `elm.json` file should have the following format:
 - update the name of your package. The name must be the name of the repository of the package
 - `exposed-modules` will contain the modules' name that will exposed the API of the package
 - `dependencies` is the list of dependencies necessary for the package. This will be updated if necessary when a new package is installed with `elm install`
+
+We will have a few more things to add later on to be able to publish our package (e.g license file, tests, documentation) but firt to be able to play with the code will come with we first create an example folder.
+
+### Create the example folder
+
+run `mkdir examples` to create the folder.
+
+The `example` folder will allow us to test rapidly our implementation and ideas and make sure the code for the package is working correctly. At the end of the development process it will also be small project example that our users can take ideas from.
+
+Create the elm example application: `cd examples && elm init`. This time the `type`'s' value in the generated `elm.json` doesn't need to be modified as it's already an application. Instead of using the `src` folder we can use the current folder of the application, change the value `  "source-directories": ["src"]` to   `"source-directories": ["."]`. It makes a bit easier to see the list of examples.
+
+
+Let's create a simple (dummy for now) Elm app in `examples/Example.elm`:
+
+```elm
+import Browser
+import Html exposing (Html, button, div, h1, text)
+
+
+main =
+  Browser.sandbox { init = init, update = update, view = view }
+
+
+-- MODEL
+
+type alias Model = String
+
+init : Model
+init =
+  "Hello"
+
+
+-- UPDATE
+
+type Msg = None
+
+update : Msg -> Model -> Model
+update msg model =
+  case msg of
+    None ->
+      model
+
+-- VIEW
+
+view : Model -> Html Msg
+view model =
+  div [] [ h1 [] [text model] ]
+
+```
+
+Still in the `examples` folder run `elm reactor` and open the application on `http://localhost:8000/Example.elm`, you should see `Hello`
+
+
+### Create the package
+
+Now that we have the `Example.elm` file we can start creating our package and try to plug it and use it with our new example application.
+
+Create a file `Filter.elm` (the name should be the one of your repository) which will have for API only a `view` function (let's try to keep things simple while we make sure that everything is initialised and plugged together)
+
+```elm
+module Filter exposing (view)
+import Html exposing (Html, button, div, h1, text)
+
+view : Html msg
+view =
+    div [] [ h1 [] [text "text from package"] ]
+```
+
+As our package is not yet published, to allow our example to use it we need to update the `elm.json` file to expose our new module:
+
+```json
+"source-directories": [
+  ".",
+  "../src"
+],
+```
+
+Then in our `Example.elm` file we can use the `view` function by importing the package then using the function in the example's view
+
+```elm
+...
+import Filter
+...
+  view : Model -> Html Msg
+  view model =
+    div []
+      [ h1 [] [text model]
+      , Criteria.view
+      ]
+```
+
+We have now a minimum version of a package (not published yet) and an example using it! We can start to think what are the next steps to be able to publish our first version!
