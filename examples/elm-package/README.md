@@ -84,7 +84,7 @@ So the `elm.json` file should have the following format:
 ```json
 {
     "type": "package",
-    "name": "dwyl/dropdown-filters",
+    "name": "dwyl/elm-criteria",
     "summary": "Dropdown with selectable filters",
     "license": "BSD-3-Clause",
     "version": "1.0.0",
@@ -158,10 +158,10 @@ Still in the `examples` folder run `elm reactor` and open the application on `ht
 
 Now that we have the `Example.elm` file we can start creating our package and try to plug it and use it with our new example application.
 
-Create a file `Filter.elm` (the name should be the one of your repository) which will have for API only a `view` function (let's try to keep things simple while we make sure that everything is initialised and plugged together)
+Create a file `Criteria.elm` which will have for API only a `view` function (let's try to keep things simple while we make sure that everything is initialised and plugged together)
 
 ```elm
-module Filter exposing (view)
+module Criteria exposing (view)
 import Html exposing (Html, button, div, h1, text)
 
 view : Html msg
@@ -182,7 +182,7 @@ Then in our `Example.elm` file we can use the `view` function by importing the p
 
 ```elm
 ...
-import Filter
+import Criteria
 ...
   view : Model -> Html Msg
   view model =
@@ -193,3 +193,46 @@ import Filter
 ```
 
 We have now a minimum version of a package (not published yet) and an example using it! We can start to think what are the next steps to be able to publish our first version!
+
+# First version
+
+From our requirement list above we can try to trim down the features and make a first basic version with the following elements
+
+- a button/pillbox with a default text to open/close the filters
+- 1 level of filters (instead of 2)
+- a filter consist of a displayed text, a value linked to this text (similar to normal dropdown) and a filter can be selected or not.
+- The package will accept a list of text/value filters
+
+## Reusable?
+
+Our main concern when creating the package is to make it **valuable** for our users and one way to do this is for the package to be **reusable** on different kind of projects.
+
+When we think about reusable code we'll most often think about components. However Elm is a functional programming language and is not really designed for creating components. To try to understand this you can read/watch the following links
+
+- https://twitter.com/czaplic/status/903266544544878592 (components are objects)
+- https://www.reddit.com/r/elm/comments/6x5w07/components_in_elm_why_not_and_how/
+
+- https://www.youtube.com/watch?v=DoA4Txr4GUs
+
+- https://www.reddit.com/r/elm/comments/5oi8jx/creating_a_simple_reusable_view_module_in_elm/
+
+- https://medium.com/@mickey.vip/an-approach-to-nested-reusable-view-functions-in-elm-a1531b9abaf3
+
+- https://discourse.elm-lang.org/t/api-design-reusable-modules/2623
+
+- https://github.com/evancz/elm-sortable-table
+
+So instead of creating components we should focus on creating reusable view.
+**Views are functions and Elm uses function composition to build applications.**
+
+Some concepts to keep in mind (extract from the above links) while designing the API of the package:
+
+- build reusable view not components (elm is a Functional Programming language not an Object-Oriented programming language)
+- Keep the API simple and short
+- Try to keep the types signature simple
+- Single source of truth for the data to avoid synchronisation issues
+- Avoid parent-child communication - don't build tree of objects/components
+
+Now that we have a better idea of resusable code with Elm, let's start to design our API
+
+## Designing the API
