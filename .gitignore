@@ -7,3 +7,5 @@ node_modules
 .DS_store
 examples/index.html
 elm-architecture-tutorial/
+
+tutorials/lazy-loading/main.js
