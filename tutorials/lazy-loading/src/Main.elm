@@ -76,7 +76,7 @@ displayNum num =
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
-    Sub.batch [ scroll Load ]
+    scroll Load
 
 
 port scroll : (Bool -> msg) -> Sub msg
