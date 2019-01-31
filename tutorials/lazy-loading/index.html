@@ -1,0 +1,31 @@
+<html>
+
+<head>
+  <title>Elm Lazy Loading</title>
+</head>
+
+<body>
+  <div id="elm"></div>
+  <script src="main.js"></script>
+  <script>
+    var app = Elm.Main.init({
+      node: document.getElementById("elm")
+    })
+
+    window.addEventListener("scroll", function (e) {
+      // Detect whether user has scrolled to the bottom of the page
+      // Then send message to the Elm app
+      var top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+      var height = (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
+
+      // We send the message if they have scrolled to within 10% 
+      // of the bottom of the page to create a smoother transition
+      if (top + window.innerHeight >= height - (height / 10)) {
+        app.ports.scroll.send(true);
+      }
+    })
+
+  </script>
+</body>
+
+</html>
