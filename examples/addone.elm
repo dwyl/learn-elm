@@ -9,4 +9,4 @@ addOne x =
 
 
 main =
-    text (toString (addOne 41))
+    text (String.fromInt (addOne 41))
