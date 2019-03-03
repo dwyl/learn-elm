@@ -1,19 +1,20 @@
-module Main exposing (..)
+module Main exposing (Model, Msg(..), init, main, subscriptions, update, view)
 
 -- Read more about this program in the official Elm guide:
 -- https://guide.elm-lang.org/architecture/effects/random.html
 
+import Browser exposing (..)
 import Html exposing (..)
 import Html.Events exposing (..)
 import Random
 
 
 main =
-    Html.program
+    Browser.element
         { init = init
-        , view = view
         , update = update
         , subscriptions = subscriptions
+        , view = view
         }
 
 
@@ -26,8 +27,8 @@ type alias Model =
     }
 
 
-init : ( Model, Cmd Msg )
-init =
+init : () -> ( Model, Cmd Msg )
+init _ =
     ( Model 1, Cmd.none )
 
 
@@ -66,6 +67,6 @@ subscriptions model =
 view : Model -> Html Msg
 view model =
     div []
-        [ h1 [] [ text (toString model.dieFace) ]
+        [ h1 [] [ text (String.fromInt model.dieFace) ]
         , button [ onClick Roll ] [ text "Roll" ]
         ]
