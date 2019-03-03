@@ -1,8 +1,10 @@
-module App exposing (..)
+module App exposing (Model, Msg(..), init, main, update, view)
 
-import Html exposing (Html, button, div, text, program)
+import Browser exposing (..)
+import Html exposing (..)
 import Html.Events exposing (onClick)
 import Random
+
 
 
 -- MODEL
@@ -12,8 +14,8 @@ type alias Model =
     Int
 
 
-init : ( Model, Cmd Msg )
-init =
+init : () -> ( Model, Cmd Msg )
+init _ =
     ( 1, Cmd.none )
 
 
@@ -34,7 +36,7 @@ view : Model -> Html Msg
 view model =
     div []
         [ button [ onClick Roll ] [ text "Roll" ]
-        , text (toString model)
+        , text (String.fromInt model)
         ]
 
 
@@ -56,11 +58,10 @@ update msg model =
 -- MAIN
 
 
-main : Program Never Model Msg
 main =
-    program
+    Browser.element
         { init = init
-        , view = view
         , update = update
-        , subscriptions = (always Sub.none)
+        , view = view
+        , subscriptions = always Sub.none
         }
