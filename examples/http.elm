@@ -1,18 +1,19 @@
-module Main exposing (..)
+module Main exposing (Model, Msg(..), decodeGifUrl, getRandomGif, init, main, subscriptions, update, view)
 
+import Browser exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
-import Http
-import Json.Decode as Decode
+import Http exposing (..)
+import Json.Decode exposing (Decoder, field, string)
 
 
 main =
-    Html.program
+    Browser.element
         { init = init "kitten"
-        , view = view
         , update = update
         , subscriptions = subscriptions
+        , view = view
         }
 
 
@@ -26,8 +27,8 @@ type alias Model =
     }
 
 
-init : String -> ( Model, Cmd Msg )
-init topic =
+init : String -> () -> ( Model, Cmd Msg )
+init topic _ =
     ( Model topic "waiting.gif"
     , getRandomGif topic
     )
@@ -39,7 +40,7 @@ init topic =
 
 type Msg
     = MorePlease
-    | NewGif (Result Http.Error String)
+    | GotGif (Result Http.Error String)
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -48,10 +49,10 @@ update msg model =
         MorePlease ->
             ( model, getRandomGif model.topic )
 
-        NewGif (Ok newUrl) ->
+        GotGif (Ok newUrl) ->
             ( Model model.topic newUrl, Cmd.none )
 
-        NewGif (Err _) ->
+        GotGif (Err _) ->
             ( model, Cmd.none )
 
 
@@ -85,16 +86,12 @@ subscriptions model =
 
 getRandomGif : String -> Cmd Msg
 getRandomGif topic =
-    let
-        url =
-            "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" ++ topic
-
-        request =
-            Http.get url decodeGifUrl
-    in
-        Http.send NewGif request
+    Http.get
+        { url = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" ++ topic
+        , expect = Http.expectJson GotGif decodeGifUrl
+        }
 
 
-decodeGifUrl : Decode.Decoder String
+decodeGifUrl : Decoder String
 decodeGifUrl =
-    Decode.at [ "data", "image_url" ] Decode.string
+    field "data" (field "image_url" string)

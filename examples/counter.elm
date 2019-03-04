@@ -1,7 +1,7 @@
 -- Elm 0.19 counter as per https://guide.elm-lang.org
 
 
-module Main exposing (..)
+module Main exposing (Msg(..), main, update, view)
 
 import Browser
 import Html exposing (Html, button, div, text)
@@ -15,6 +15,7 @@ main =
 type Msg
     = Increment
     | Decrement
+    | Reset
 
 
 update msg model =
@@ -24,6 +25,9 @@ update msg model =
 
         Decrement ->
             model - 1
+
+        Reset ->
+            0
 
 
 view model =

@@ -1,11 +1,13 @@
-import Html exposing (Html, beginnerProgram, fieldset, input, label, text)
+module Main exposing (Model, Msg(..), checkbox, init, main, update, view)
+
+import Browser exposing (..)
+import Html exposing (..)
 import Html.Attributes exposing (style, type_)
 import Html.Events exposing (onClick)
 
 
-
 main =
-  beginnerProgram { model = optOut, update = update, view = view }
+    Browser.sandbox { init = init, update = update, view = view }
 
 
 
@@ -13,15 +15,15 @@ main =
 
 
 type alias Model =
-  { notifications : Bool
-  , autoplay : Bool
-  , location : Bool
-  }
+    { notifications : Bool
+    , autoplay : Bool
+    , location : Bool
+    }
 
 
-optOut : Model
-optOut =
-  Model True True True
+init : Model
+init =
+    Model True True True
 
 
 
@@ -29,22 +31,22 @@ optOut =
 
 
 type Msg
-  = ToggleNotifications
-  | ToggleAutoplay
-  | ToggleLocation
+    = ToggleNotifications
+    | ToggleAutoplay
+    | ToggleLocation
 
 
 update : Msg -> Model -> Model
 update msg model =
-  case msg of
-    ToggleNotifications ->
-      { model | notifications = not model.notifications }
+    case msg of
+        ToggleNotifications ->
+            { model | notifications = not model.notifications }
 
-    ToggleAutoplay ->
-      { model | autoplay = not model.autoplay }
+        ToggleAutoplay ->
+            { model | autoplay = not model.autoplay }
 
-    ToggleLocation ->
-      { model | location = not model.location }
+        ToggleLocation ->
+            { model | location = not model.location }
 
 
 
@@ -53,18 +55,17 @@ update msg model =
 
 view : Model -> Html Msg
 view model =
-  fieldset []
-    [ checkbox ToggleNotifications "Email Notifications"
-    , checkbox ToggleAutoplay "Video Autoplay"
-    , checkbox ToggleLocation "Use Location"
-    ]
+    fieldset []
+        [ checkbox ToggleNotifications "Email Notifications"
+        , checkbox ToggleAutoplay "Video Autoplay"
+        , checkbox ToggleLocation "Use Location"
+        ]
 
 
 checkbox : msg -> String -> Html msg
 checkbox msg name =
-  label
-    [ style [("padding", "20px")]
-    ]
-    [ input [ type_ "checkbox", onClick msg ] []
-    , text name
-    ]
+    label
+        [ style "padding" "20px" ]
+        [ input [ type_ "checkbox", onClick msg ] []
+        , text name
+        ]
