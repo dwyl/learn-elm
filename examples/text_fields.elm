@@ -1,12 +1,13 @@
-module Main exposing (..)
+module Main exposing (Model, Msg(..), init, main, update, view)
 
-import Html exposing (Html, Attribute, div, input, text)
+import Browser exposing (..)
+import Html exposing (Attribute, Html, div, input, text)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onInput)
 
 
 main =
-    Html.beginnerProgram { model = model, view = view, update = update }
+    Browser.sandbox { init = init, view = view, update = update }
 
 
 
@@ -18,8 +19,8 @@ type alias Model =
     }
 
 
-model : Model
-model =
+init : Model
+init =
     { content = "" }
 
 
