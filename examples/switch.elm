@@ -1,4 +1,4 @@
-module Main exposing (..)
+module Main exposing (main, switch, tupleToList)
 
 import Html exposing (text)
 
@@ -9,4 +9,11 @@ switch ( x, y ) =
 
 
 main =
-    text (toString (switch ( "A", "B" )))
+    switch ( "A", "B" )
+        |> tupleToList
+        |> String.concat
+        |> text
+
+
+tupleToList ( a, b ) =
+    [ a, b ]
