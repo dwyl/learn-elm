@@ -1,7 +1,7 @@
 # BMI Calculator
 
 Calculates body mass index (BMI).
-BMI is calculated by dividing wight (Kg) to square of height (m).
+BMI is calculated by dividing weight (Kg) to square of height (m).
 
 ## Compile app
 
