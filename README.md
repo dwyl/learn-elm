@@ -13,7 +13,7 @@ have "borrowed" (_shamelessly copied_) it's ideas. (Redux, Immutable.js, etc.)
 > @rtfeldman put it best in his
 [**6 Months of Elm in Production** talk](https://youtu.be/R2FtMbb-nLs?t=47m36s)
 (_which we **highly recommend** watching!_)<br />
-"_If you take **two products** and **compare**them
+"_If you take **two products** and **compare** them
 on **feature-checklists**
 that gets you <br />
 a **very inaccurate picture**
@@ -188,13 +188,13 @@ you _can_ install it _globally_ using
 
 #### 4. Server Time!
 
-Run the `elm-reactor` command to start the _server._
-
-Elm-reactor started the server on your localhost.
+Run the `elm-reactor` command to start the _server:_
 
 ```sh
 node_modules/.bin/elm-reactor
 ```
+
+Elm-reactor has now started the server on your localhost.
 
 > Note if you install elm _globally_ you will be able to type `elm-reactor`
 without the `node_modules/.bin/` (_relative path_)
@@ -221,9 +221,9 @@ would compile into `HTML` _without_ having to use `elm-make`
 #### 6. _Reflect_
 
 You just saw how _easy_ it is to get started with `elm`,
-how do you `feel`?
+how do you _feel_?
 Was it "_difficult_"?
-Better or _worse_ than you experience learning
+Better or _worse_ than your experience of learning
 any other technical concept/tool/language?
 
 Please share your thoughts!
@@ -239,9 +239,9 @@ http://guide.elm-lang.org/ <br />
 
 > At the time of writing, the _entire_ "_Official_" guide to Elm (GitBook)
 (_written Evan Czaplicki, creator of Elm, and improved by the community_)
-is ***110 pages*** (_with generous spacing in the code examples_).
+is ***136 pages*** (_with generous spacing in the code examples_).
 > The guide is readable/learnable in _less than a day_
-including trying all the example/demo code.
+including trying all the example and demo code.
 > If you prefer to download and read the guide "offline"
 (_e.g: on public transport during your commute to work..._),
 You can download a PDF, ePub or Mobi (Kindle) for _free_ at:
@@ -289,8 +289,8 @@ as you _really_ should be following the
 [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege).
 
 Remember, if you are adding Elm to a project
-which will be deployed on a hosting service (such a heroku)
-you will need to add elm to the dependencies, in your package.json.
+which will be deployed on a hosting service (such as heroku)
+you will need to add elm to the dependencies in your `package.json`.
 
 ```js
 npm install elm --save
@@ -403,7 +403,7 @@ https://github.com/isRuslan/awesome-elm
 
 + How to use Elm at work: http://elm-lang.org/blog/how-to-use-elm-at-work
 (_or work for DWYL where you're actively encouraged to use it!_)
-+ JavaScript interoperability: https://guide.elm-lang.org/interop/javascript.html
++ JavaScript interoperability: https://guide.elm-lang.org/interop/
 + How to add Elm to _existing_ JS codebase: http://tech.noredink.com/post/126978281075/walkthrough-introducing-elm-to-a-js-web-app
 + How Elm made our work better (_success story_):
 http://futurice.com/blog/elm-in-the-real-world
@@ -421,7 +421,7 @@ it can make sense for the URL to change as well,
 so that the user can navigate back to the same view as they please.
   + Check [this article from staticapps.org](https://staticapps.org/articles/routing-urls-in-static-apps/)
   out for a little more info on routing in Single Page Apps in General
-  + And get started [by going to the routing section of the elm-tutorial gitbook](https://www.elm-tutorial.org/en/07-routing/01-intro.html)
+  + And get started [by going to the routing section of the elm-tutorial gitbook](https://sporto.gitbooks.io/elm-tutorial/content/en/07-routing/02-routing.html)
   to learn how to implement it in your Elm app!
   +  [This example](https://github.com/elm-lang/navigation/tree/master/examples)
   from the _elm-lang/navigation_ github repo is super helpful too.
@@ -440,6 +440,6 @@ so that the user can navigate back to the same view as they please.
 ### Promising but _incomplete_:
 
 + Learn You an `Elm` http://learnyouanelm.github.io/
-(_lots of "Todo" items and last updated 2 months ago_)
+(_lots of "Todo" items and last updated about a year go_)
 
 [![HitCount](http://hits.dwyl.io/dwyl/learn-elm.svg)](http://hits.dwyl.io/dwyl/learn-elm)
