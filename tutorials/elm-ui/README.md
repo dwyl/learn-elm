@@ -3,6 +3,7 @@
 
 ## _Why?_ 😢 `|>` 😍
 
+
 People who are learning `CSS`
 (_or those who are too impatient to learn and just want it to "work now"!_),
 often end up feeling like `CSS` is a wild beast that cannot be tamed.
@@ -35,18 +36,18 @@ duplicate and _conflicting_ styles will be added.
 
 Take any popular website and run it through CSS Stats https://cssstats.com
 to see how many styles are being used.
-A good example is [Twitter.com](https://twitter.com)
-Their CSS is **632kb**
+A good example is [Twitter.com](https://twitter.com).
+Their CSS is **632KB** (_or **113KB** when compressed+gzipped_).
 
 ![twitter-css-stats](https://user-images.githubusercontent.com/194400/70567485-f56b2580-1b8d-11ea-94c4-4e2ca8b5cd10.png)
 
 That might not sound like a lot,
-but scroll down to the part that says **1024 total color declarations**:
+but scroll down to the section that says **1024 total color declarations**:
 
 ![twitter-css-stats-colors](https://user-images.githubusercontent.com/194400/70567583-1df31f80-1b8e-11ea-99d2-0c78a6f88a5d.png)
 
 Can you tell the difference between those shades of grey, blue and _white_??
-The point is that the developers/designers at Twitter - a tech company
+The point is: developers/designers at Twitter - a tech company
 with **billions** in revenue and some of the most talented people -
 do not have _control_ over their CSS.
 
@@ -62,15 +63,15 @@ And yet twitter, which has a _great_ in-house design team
 with their own _system_ and component library,
 have managed to build a
 
-
-
 The problem isn't you, the problem is the (_lack of a_) _system_.
-
 
 @dwyl we _love_ the idea of having semantic and functional UIs
 with no side-effects. Functional CSS allows you to change one style
-without affecting any others. For the past few years
-https://github.com/dwyl/learn-tachyons
+without affecting any others.
+For the past few years we have been using Tachyons
+see: https://github.com/dwyl/learn-tachyons
+It's been _good_ in small-ish teams (_max 8 people_),
+
 
 
 
@@ -86,6 +87,13 @@ https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest/
 `elm-ui` is to `HTML` and `CSS`
 what `elm` is to `JavaScript`.
 `elm-ui` offers compile-time guarantees that your layout and styles.
+
+> "_It's all right there.
+There's no other place you have to go to modify this thing_."
+> 
+
+[![elm-ui-tookit-for-design](https://user-images.githubusercontent.com/194400/70571846-7c240080-1b96-11ea-9dd2-cacae7110b54.png)](https://youtu.be/Ie-gqwSHQr0)
+https://youtu.be/Ie-gqwSHQr0
 
 
 ## _How?_
@@ -108,6 +116,9 @@ in the `elm.json` `"dependencies"` section.
 
 
 ### Debugging Layout with `Element.explain Debug.todo`
+
+[Debug]
+https://package.elm-lang.org/packages/elm-lang/core/3.0.0/Debug
 
 
 ## References and Recommended Reading
