@@ -8,7 +8,8 @@
         "direct": {
             "elm/browser": "1.0.2",
             "elm/core": "1.0.4",
-            "elm/html": "1.0.0"
+            "elm/html": "1.0.0",
+            "mdgriffith/elm-ui": "1.1.5"
         },
         "indirect": {
             "elm/json": "1.1.3",
