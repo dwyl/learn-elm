@@ -26,6 +26,11 @@ That's where `elm-ui` comes in and changes the game!
 for building semantic UI
 with compile-time guarantees.
 
++ GitHub:
+https://github.com/mdgriffith/elm-ui
++ Elm Package:
+https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest
+
 `elm-ui` is to `HTML` and `CSS`
 what `elm` is to `JavaScript`,
 a way of making designing web applications fun again!
@@ -40,7 +45,8 @@ In this case I have attempted to apply a `Float` of 2.5 to the `Border.rounded` 
 
 The same thing goes if I attempt to pass a `String` to `Border.rounded` e.g: `"2px"`
 ![image](https://user-images.githubusercontent.com/194400/70662334-ec498980-1c5d-11ea-9336-56f30db80270.png)
-I get a type mismatch.
+We get a type mismatch and know _exactly_ what needs to be fixed
+in order for our view to compile.
 
 
 Matthew Griffith described it eloquently in his Elm Conf talk
@@ -52,11 +58,6 @@ https://youtu.be/Ie-gqwSHQr0
 > "_It's all right there.
 There's no other place you have to go to modify this thing_."
 
-
-+ GitHub:
-https://github.com/mdgriffith/elm-ui
-+ Elm Package:
-https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest
 
 ## _How?_
 
@@ -77,11 +78,75 @@ in the `elm.json` `"dependencies"` section.
 `elm install` does not actually _install_ anything.
 
 
+Now create a directory called `src`
+and a new file in the directory `src/Main.elm`.
+Next _type_ (_or copy-paste_) the following code into the `src/Main.elm` file:
+
+```elm
+module Main exposing (main)
+
+import Element exposing (Element, alignRight, centerX, centerY, el, fill, rgb255, row, spacing, text, width)
+import Element.Background as Background
+import Element.Border as Border
+import Element.Font as Font
+
+
+main =
+    Element.layout []
+        rowOfStuff
+
+
+rowOfStuff : Element msg
+rowOfStuff =
+    row [ width fill, centerY, spacing 30 ]
+        [ myElement
+        , el [ centerX ] myElement
+        , el [ alignRight ] myElement -- align the element to the right
+        ]
+
+
+myElement : Element msg
+myElement =
+    el
+        [ Background.color (rgb255 75 192 169)
+        , Font.color (rgb255 255 255 255)
+        , Border.rounded 10
+        , padding 30
+        ]
+        (text "stylish!")
+
+```
+
+In your terminal run:
+```
+elm reactor
+```
+Open the following page in your web browser:
+http://localhost:8000/src/Main.elm
+
+You should expect to see:
+
+![elm-ui-basic-layout](https://user-images.githubusercontent.com/194400/70663573-90cccb00-1c60-11ea-8a1c-71d15d2b83ad.png)
+
+
+
+
+<br />
 
 ### Drawbacks
 
+`Colors` have to be specified in terms of **rgb** values.
+i.e. you need to supply the individual values for `Red` `Blue` `Green` as `Int`.
 
-`Colors` have to be specified
+If I attempt to invoke `rgb255 75, 192, 169` I will see the following error:
+
+![elm-ui-rgb-error](https://user-images.githubusercontent.com/194400/70663222-cfae5100-1c5f-11ea-8fa6-6d4437e3af14.png)
+
+This is a _small_ price to pay given that it allows us to _easily_
+implement a color picker allowing people to easily select _any_ color
+when they are [_categorising_](https://github.com/dwyl/app/issues/235)
+
+![color-picker-dwyl-teal](https://user-images.githubusercontent.com/194400/70664979-72b49a00-1c63-11ea-80f4-fc533948f60f.png)
 
 
 ### Debugging Layout with `Element.explain Debug.todo`
