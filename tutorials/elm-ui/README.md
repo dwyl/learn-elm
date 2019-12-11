@@ -118,9 +118,11 @@ myElement =
 ```
 
 In your terminal run:
+
 ```
 elm reactor
 ```
+
 Open the following page in your web browser:
 http://localhost:8000/src/Main.elm
 
@@ -147,6 +149,14 @@ implement a color picker allowing people to easily select _any_ color
 when they are [_categorising_](https://github.com/dwyl/app/issues/235)
 
 ![color-picker-dwyl-teal](https://user-images.githubusercontent.com/194400/70664979-72b49a00-1c63-11ea-80f4-fc533948f60f.png)
+
+In the short-term if we have a _hex_ value e.g: `#4bc0a9`
+that we need to convert to RGB,
+~~simply use a free online tool:
+https://www.rapidtables.com/convert/color/hex-to-rgb.html~~
+pasting the _hex_ into google returns the RGB conversion.
+e.g: https://www.google.com/search?q=%234bc0a9
+
 
 
 ### Debugging Layout with `Element.explain Debug.todo`
