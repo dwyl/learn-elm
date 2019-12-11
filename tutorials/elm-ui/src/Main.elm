@@ -16,7 +16,7 @@ myRowOfStuff =
     row [ width fill, centerY, spacing 30 ]
         [ myElement
         , el [ centerX ] myElement
-        , el [ alignRight, padding ] myElement -- align the element to the right
+        , el [ alignRight ] myElement -- align the element to the right
         ]
 
 
@@ -25,7 +25,7 @@ myElement =
     el
         [ Background.color (rgb255 240 0 245)
         , Font.color (rgb255 255 255 255)
-        , Border.rounded 3
+        , Border.rounded 10
         , padding 30
         ]
         (text "stylish!")

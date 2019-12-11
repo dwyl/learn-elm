@@ -1,7 +1,7 @@
 # `elm-ui` a Language for Layout and Interface
 
 
-## _Why?_ 😢 `|>` 😍
+## _Why?_ 🤷 ... 😢 🌧  `|>` 😍🌈
 
 @dwyl we _love_ the idea of having semantic and functional UIs
 with no side-effects. Functional CSS allows anyone
@@ -9,24 +9,39 @@ to change _one_ style on a single element
 without affecting any others.
 For the past few years we have been using the Tachyons library
 see: https://github.com/dwyl/learn-tachyons
-It's been _good_ in small-ish teams (_max 8 people_),
+Using Tachyons in dosens of projects
+has been _good_ in small teams (_max 8 people_).
+However we have found that even with a functional CSS library
+(_that greatly reduces the possibility of cascading side effects_),
+we still see redundant and unnecessary styles
+and occasionally visual bugs are introduced that go undetected.
+No CSS library we know of offers compile-time guarantees
+that the layout/styles applied to a given element are _correct_.
+That's where `elm-ui` comes in and changes the game!
 
 
+## _What?_ 💭
 
-
-Design System for Building Semantic Compiled UI
-
-+ GitHub:
-https://github.com/mdgriffith/elm-ui
-+ Elm Package:
-https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest/
-
-## _What?_
+`elm-ui` is a design system
+for building semantic UI
+with compile-time guarantees.
 
 `elm-ui` is to `HTML` and `CSS`
-what `elm` is to `JavaScript`.
+what `elm` is to `JavaScript`,
+a way of making designing web applications fun again!
 `elm-ui` offers compile-time guarantees
 that your layout and styles work as expected.
+You will see _helpful_ compiler errors/warnings
+if you attempt to make a _breaking_ change to UI!
+e.g:
+
+In this case I have attempted to apply a `Float` of 2.5 to the `Border.rounded` (`border-radius`) property:
+![image](https://user-images.githubusercontent.com/194400/70662062-69283380-1c5d-11ea-8d90-1d4f72d67ec6.png)
+
+The same thing goes if I attempt to pass a `String` to `Border.rounded` e.g: `"2px"`
+![image](https://user-images.githubusercontent.com/194400/70662334-ec498980-1c5d-11ea-9336-56f30db80270.png)
+I get a type mismatch.
+
 
 Matthew Griffith described it eloquently in his Elm Conf talk
 "Building a Toolkit for Design":
@@ -37,6 +52,11 @@ https://youtu.be/Ie-gqwSHQr0
 > "_It's all right there.
 There's no other place you have to go to modify this thing_."
 
+
++ GitHub:
+https://github.com/mdgriffith/elm-ui
++ Elm Package:
+https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest
 
 ## _How?_
 
@@ -57,6 +77,13 @@ in the `elm.json` `"dependencies"` section.
 `elm install` does not actually _install_ anything.
 
 
+
+### Drawbacks
+
+
+`Colors` have to be specified
+
+
 ### Debugging Layout with `Element.explain Debug.todo`
 
 [Debug]
@@ -66,10 +93,11 @@ https://package.elm-lang.org/packages/elm-lang/core/3.0.0/Debug
 ## References and Recommended Reading
 
 + `elm-ui` _examples_: https://github.com/bburdette/elm-ui-examples
-+
++ Style framework (_built on `elm-ui`_):
+https://github.com/lucamug/style-framework
 
 
-<br />
+<br /><br />
 
 ## _Why NOT Just Use CSS_?
 
