@@ -107,7 +107,7 @@ rowOfStuff =
     row [ width fill, centerY, spacing 30 ]
         [ myElement
         , el [ centerX ] myElement
-        , el [ alignRight ] myElement -- align the element to the right
+        , el [ alignRight ] myElement
         ]
 
 
@@ -140,15 +140,120 @@ You should expect to see:
 
 ![elm-ui-basic-layout](https://user-images.githubusercontent.com/194400/70663573-90cccb00-1c60-11ea-8a1c-71d15d2b83ad.png)
 
+Let's break down this code section by section:
+
+The first line is the standard `Elm` module (export) directive.
+```elm
+module Main exposing (main)
+```
+
+The next section are the imports:
+```elm
+import Element exposing (Element, alignRight, centerX, centerY, el, fill, padding, rgb255, row, spacing, text, width)
+import Element.Background as Background
+import Element.Border as Border
+import Element.Font as Font
+```
+These are fairly standard scoped `elm` import statements.
+
+We are covering 4 out of 9 of the available `elm-ui` modules.
+The one with the most features/functions is
+[`Elemenent`](https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest/Element)
+which contains everything you need for creating standard HTML elements
+including their layout and positioning.
+[`Background`](https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest/Element-Background),
+[`Border`](https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest/Element-Border)
+and
+[`Font`](https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest/Element-Font)
+are _exactly_ what you would expect them to be.
 
 
 
-<br />
+
+A note on long import lines:
+if you attempt to split the `import Element` declaration into two lines:
+```elm
+import Element exposing (Element, alignRight, centerX, centerY, el, fill)
+import Element exposing (padding, rgb255, row, spacing, text, width)
+```
+`elm-format` will re-format the two lines into one again ... we tried ... 🙄
+
+The way to get around this is to follow the
+[`elm` guide modules](https://guide.elm-lang.org/webapps/modules.html)
+advice and avoid using `exposing` unless it's absolutely necessary.
+So we can convert the super-long import  
+(_which will only get longer as your view expands to include more style_):
+
+From:
+
+```elm
+import Element exposing (Element, alignRight, centerX, centerY, el, fill, padding, rgb255, row, spacing, text, width)
+```
+
+To:
+
+```elm
+import Element as E exposing (Element, el, row)
+```
+This only makes the top level elements `el` and `row` available
+for use in our view functions. The rest of the `elm-ui` functions
+need to be prefixed with `E` e.g: `E.functionName`
+
+
+The _full_ revised code would be:
+
+```elm
+module Main exposing (main)
+
+import Element exposing (Element, alignRight, centerX, centerY, el, fill, padding, rgb255, row, spacing, text, width)
+import Element.Background as Background
+import Element.Border as Border
+import Element.Font as Font
+
+
+main =
+    Element.layout []
+        rowOfStuff
+
+
+rowOfStuff : Element msg
+rowOfStuff =
+    row [ width fill, centerY, spacing 30 ]
+        [ myElement
+        , el [ centerX ] myElement
+        , el [ alignRight ] myElement -- align the element to the right
+        ]
+
+
+myElement : Element msg
+myElement =
+    el
+        [ Background.color (rgb255 75 192 169)
+        , Font.color (rgb255 255 255 255)
+        , Border.rounded 10
+        , paddign 30
+        ]
+        (E.text "stylish!")
+```
+
+Some people might feel that this is more to type.
+However it's _immediately_ clear where a given function "comes from"
+and there is a much lower risk of naming conflicts.
+E.g. you might have a _dynamic_ (_or "responsive"_) view function
+that changes depending on the `width` of the viewport (_screen_).
+
+
+
+<br /><br />
 
 ### Drawbacks
 
 `Colors` have to be specified in terms of **rgb** values.
 i.e. you need to supply the individual values for `Red` `Blue` `Green` as `Int`.
+e.g:
+```elm
+Background.color (rgb255 75 192 169)
+```
 
 If I attempt to invoke `rgb255 75, 192, 169` I will see the following error:
 
