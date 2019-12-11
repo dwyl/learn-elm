@@ -1,4 +1,4 @@
-# `elm-ui` a Language for Layout and Interface
+# `elm-ui` a Language for _Reliable_ Layout and Interface
 
 
 ## _Why?_ 🤷 ... 😢 🌧  `|>` 😍🌈
@@ -31,24 +31,6 @@ https://github.com/mdgriffith/elm-ui
 + Elm Package:
 https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest
 
-`elm-ui` is to `HTML` and `CSS`
-what `elm` is to `JavaScript`,
-a way of making designing web applications fun again!
-`elm-ui` offers compile-time guarantees
-that your layout and styles work as expected.
-You will see _helpful_ compiler errors/warnings
-if you attempt to make a _breaking_ change to UI!
-e.g:
-
-In this case I have attempted to apply a `Float` of 2.5 to the `Border.rounded` (`border-radius`) property:
-![image](https://user-images.githubusercontent.com/194400/70662062-69283380-1c5d-11ea-8d90-1d4f72d67ec6.png)
-
-The same thing goes if I attempt to pass a `String` to `Border.rounded` e.g: `"2px"`
-![image](https://user-images.githubusercontent.com/194400/70662334-ec498980-1c5d-11ea-9336-56f30db80270.png)
-We get a type mismatch and know _exactly_ what needs to be fixed
-in order for our view to compile.
-
-
 Matthew Griffith described it eloquently in his Elm Conf talk
 "Building a Toolkit for Design":
 
@@ -59,7 +41,31 @@ https://youtu.be/Ie-gqwSHQr0
 There's no other place you have to go to modify this thing_."
 
 
-## _How?_
+`elm-ui` is to `HTML` and `CSS`
+what `elm` is to `JavaScript`,
+a way of making designing web applications fun again!
+`elm-ui` offers compile-time guarantees
+that your layout and styles work as expected.
+You will see _helpful_ compiler errors/warnings
+if you attempt to make a _breaking_ change to UI!
+
+Consider the following examples:
+
+In this case I have attempted to apply a `Float` of 2.5 to the `Border.rounded` (`border-radius`) property:
+![image](https://user-images.githubusercontent.com/194400/70662062-69283380-1c5d-11ea-8d90-1d4f72d67ec6.png)
+
+The same thing goes if I attempt to pass a `String` to `Border.rounded` e.g: `"2px"`
+![image](https://user-images.githubusercontent.com/194400/70662334-ec498980-1c5d-11ea-9336-56f30db80270.png)
+We get a type mismatch and know _exactly_ what needs to be fixed
+in order for our view to compile.
+
+If you make a typo in your layout/style it's won't compile:
+
+![elm-ui-paddign-error](https://user-images.githubusercontent.com/194400/70667023-caed9b00-1c67-11ea-8396-0bf47d87a7d0.png)
+
+
+
+## _How?_ 📝
 
 In a new directory, initialise your `elm` workflow with the following command:
 ```sh
@@ -85,7 +91,7 @@ Next _type_ (_or copy-paste_) the following code into the `src/Main.elm` file:
 ```elm
 module Main exposing (main)
 
-import Element exposing (Element, alignRight, centerX, centerY, el, fill, rgb255, row, spacing, text, width)
+import Element exposing (Element, alignRight, centerX, centerY, el, fill, padding, rgb255, row, spacing, text, width)
 import Element.Background as Background
 import Element.Border as Border
 import Element.Font as Font
@@ -114,8 +120,12 @@ myElement =
         , padding 30
         ]
         (text "stylish!")
-
 ```
+
+> This is the canonical example in the docs:
+https://github.com/mdgriffith/elm-ui
+If you are unable to run the code on your `localhost`
+try the Ellie version: https://ellie-app.com/3f2n4J5RnT3a1
 
 In your terminal run:
 
@@ -174,7 +184,7 @@ https://github.com/lucamug/style-framework
 
 <br /><br />
 
-## _Why NOT Just Use CSS_?
+## _Why NOT Just Use CSS_? 🤷
 
 
 People who are learning `CSS`

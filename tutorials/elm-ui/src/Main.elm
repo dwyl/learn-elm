@@ -1,6 +1,6 @@
 module Main exposing (main)
 
-import Element exposing (Element, alignRight, centerX, centerY, el, fill, rgb255, row, spacing, text, width)
+import Element exposing (Element, alignRight, centerX, centerY, el, fill, padding, rgb255, row, spacing, text, width)
 import Element.Background as Background
 import Element.Border as Border
 import Element.Font as Font
@@ -26,6 +26,6 @@ myElement =
         [ Background.color (rgb255 75 192 169)
         , Font.color (rgb255 255 255 255)
         , Border.rounded 10
-        , padding 30
+        , paddign 30
         ]
         (text "stylish!")
