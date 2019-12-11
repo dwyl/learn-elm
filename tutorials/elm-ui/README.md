@@ -198,6 +198,10 @@ import Element as E exposing (Element, el, row)
 This only makes the top level elements `el` and `row` available
 for use in our view functions. The rest of the `elm-ui` functions
 need to be prefixed with `E` e.g: `E.functionName`
+Avoid using uncontrolled import statements
+e.g: `import Element exposing (..)` at all cost.
+They might be tempting in the short-run,
+but they rapidly become an unmaintainable headache.
 
 
 The _full_ revised code would be:
@@ -205,42 +209,56 @@ The _full_ revised code would be:
 ```elm
 module Main exposing (main)
 
-import Element exposing (Element, alignRight, centerX, centerY, el, fill, padding, rgb255, row, spacing, text, width)
+import Element as E exposing (Element, el, row)
 import Element.Background as Background
 import Element.Border as Border
 import Element.Font as Font
 
 
 main =
-    Element.layout []
+    E.layout []
         rowOfStuff
 
 
 rowOfStuff : Element msg
 rowOfStuff =
-    row [ width fill, centerY, spacing 30 ]
+    row [ E.width E.fill, E.centerY, E.spacing 30 ]
         [ myElement
-        , el [ centerX ] myElement
-        , el [ alignRight ] myElement -- align the element to the right
+        , el [ E.centerX ] myElement
+        , el [ E.alignRight ] myElement
         ]
 
 
 myElement : Element msg
 myElement =
     el
-        [ Background.color (rgb255 75 192 169)
-        , Font.color (rgb255 255 255 255)
+        [ Background.color (E.rgb255 75 192 169)
+        , Font.color (E.rgb255 255 255 255)
         , Border.rounded 10
-        , paddign 30
+        , E.padding 30
         ]
         (E.text "stylish!")
 ```
 
-Some people might feel that this is more to type.
+Some people might feel that this tedious because it's more to type.
 However it's _immediately_ clear where a given function "comes from"
 and there is a much lower risk of naming conflicts.
-E.g. you might have a _dynamic_ (_or "responsive"_) view function
+
+Consider the following scenario:
+Your App has a _dynamic_ (_or "responsive"_) navigation view function
 that changes depending on the `width` of the viewport (_screen_).
+The signature of the function might be something like this:
+
+```elm
+nav : Int -> Html Msg
+nav width =
+  if width > 600 then
+    E.row [ E.]
+  else
+
+
+
+```
 
 
 
