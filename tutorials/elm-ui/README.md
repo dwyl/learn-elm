@@ -253,11 +253,9 @@ The signature of the function might be something like this:
 nav : Int -> Html Msg
 nav width =
   if width > 600 then
-    E.row [ E.]
+    E.row [ E.width E.fill]
   else
-
-
-
+    -- something else
 ```
 
 
