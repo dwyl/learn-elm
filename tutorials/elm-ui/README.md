@@ -38,7 +38,7 @@ Matthew Griffith described it eloquently in his Elm Conf talk
 https://youtu.be/Ie-gqwSHQr0
 
 > "_It's all right there.
-There's no other place you have to go to modify this thing_."
+There's no other place you have to go to modify this_."
 
 
 `elm-ui` is to `HTML` and `CSS`
@@ -49,7 +49,7 @@ that your layout and styles work as expected.
 You will see _helpful_ compiler errors/warnings
 if you attempt to make a _breaking_ change to UI!
 
-Consider the following examples:
+### Example Compile Time Warnings
 
 In this case I have attempted to apply a `Float` of 2.5 to the `Border.rounded` (`border-radius`) property:
 ![image](https://user-images.githubusercontent.com/194400/70662062-69283380-1c5d-11ea-8d90-1d4f72d67ec6.png)
@@ -63,6 +63,10 @@ If you make a typo in your layout/style it's won't compile:
 
 ![elm-ui-paddign-error](https://user-images.githubusercontent.com/194400/70667023-caed9b00-1c67-11ea-8396-0bf47d87a7d0.png)
 
+Hopefully that gives you a _taste_
+for the compiler warnings provided by `elm-ui`.
+The best way to experience this further
+is to start
 
 
 ## _How?_ 📝
@@ -80,13 +84,15 @@ Next we will add the dependency for `mdgriffith/elm-ui`:
 elm install mdgriffith/elm-ui
 ```
 > **Note**: that command will only add an entry
-in the `elm.json` `"dependencies"` section.
-`elm install` does not actually _install_ anything.
+in the `elm.json` `"dependencies"` section. <br />
+`elm install` does not actually _install_ anything
+until you attempt to compile the app.
 
 
 Now create a directory called `src`
 and a new file in the directory `src/Main.elm`.
-Next _type_ (_or copy-paste_) the following code into the `src/Main.elm` file:
+Next _type_ (_or copy-paste_) the following code
+into the `src/Main.elm` file:
 
 ```elm
 module Main exposing (main)
@@ -197,10 +203,12 @@ import Element as E exposing (Element, el, row)
 ```
 This only makes the top level elements `el` and `row` available
 for use in our view functions. The rest of the `elm-ui` functions
-need to be prefixed with `E` e.g: `E.functionName`
-Avoid using uncontrolled import statements
-e.g: `import Element exposing (..)` at all cost.
-They might be tempting in the short-run,
+need to be prefixed with `E` e.g: `E.functionName`.
+The advice from the creator of Elm
+and other experienced Elm devs is:
+avoid using uncontrolled import statements
+e.g: `import Element exposing (..)`.
+It might be tempting in the short-run to just "import everything",
 but they rapidly become an unmaintainable headache.
 
 
@@ -244,6 +252,7 @@ Some people might feel that this tedious because it's more to type.
 However it's _immediately_ clear where a given function "comes from"
 and there is a much lower risk of naming conflicts.
 
+<!--
 Consider the following scenario:
 Your App has a _dynamic_ (_or "responsive"_) navigation view function
 that changes depending on the `width` of the viewport (_screen_).
@@ -256,7 +265,18 @@ nav width =
     E.row [ E.width E.fill]
   else
     -- something else
+    -- TODO: paste example of responsive Nav once we've created it!
 ```
+-->
+
+
+
+
+
+
+
+
+
 
 
 
@@ -286,21 +306,24 @@ that we need to convert to RGB,
 ~~simply use a free online tool:
 https://www.rapidtables.com/convert/color/hex-to-rgb.html~~
 pasting the _hex_ into google returns the RGB conversion.
-e.g: https://www.google.com/search?q=%234bc0a9
-
+e.g: https://www.google.com/search?q=%234bc0a9 <br />
+A color explorer site like Color Hexa has even more detail.
+e.g: https://color-hex.org/color/4bc0a9
 
 
 ### Debugging Layout with `Element.explain Debug.todo`
 
-[Debug]
-https://package.elm-lang.org/packages/elm-lang/core/3.0.0/Debug
+[Debug](https://package.elm-lang.org/packages/elm-lang/core/3.0.0/Debug)
 
+<br /><br />
 
 ## References and Recommended Reading
 
 + `elm-ui` _examples_: https://github.com/bburdette/elm-ui-examples
 + Style framework (_built on `elm-ui`_):
 https://github.com/lucamug/style-framework
++ Elm UI Explorer (Style Guide):
+https://package.elm-lang.org/packages/kalutheo/elm-ui-explorer/4.0.0/
 
 
 <br /><br />
@@ -309,7 +332,7 @@ https://github.com/lucamug/style-framework
 
 
 People who are learning `CSS`
-(_or those who are too impatient to learn and just want it to "work now"!_),
+(_or those who are too impatient to learn and just want it to "work now!"_),
 often end up feeling like `CSS` is a wild beast that cannot be tamed.
 There's a _reason_ why searching for
 ["CSS gif"](https://www.google.com/search?q=css+gif&tbm=isch)
