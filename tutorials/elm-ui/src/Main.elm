@@ -13,7 +13,12 @@ main =
 
 rowOfStuff : Element msg
 rowOfStuff =
-    row [ E.width E.fill, E.centerY, E.spacing 30 ]
+    row
+        [ E.width E.fill
+        , E.centerY
+        , E.paddingXY 42 10
+        , Background.color (E.rgb255 215 219 218)
+        ]
         [ myElement
         , el [ E.centerX ] myElement
         , el [ E.alignRight ] myElement
