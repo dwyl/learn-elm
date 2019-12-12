@@ -1,36 +1,31 @@
 module Main exposing (main)
 
-import Element as E exposing (Element, el, row)
+import Element exposing (Element, alignRight, centerX, centerY, el, fill, padding, rgb255, row, spacing, text, width)
 import Element.Background as Background
 import Element.Border as Border
 import Element.Font as Font
 
 
 main =
-    E.layout []
+    Element.layout []
         rowOfStuff
 
 
 rowOfStuff : Element msg
 rowOfStuff =
-    row
-        [ E.width E.fill
-        , E.centerY
-        , E.paddingXY 42 10
-        , Background.color (E.rgb255 215 219 218)
-        ]
+    row [ width fill, centerY, spacing 30 ]
         [ myElement
-        , el [ E.centerX ] myElement
-        , el [ E.alignRight ] myElement
+        , el [ centerX ] myElement
+        , el [ alignRight ] myElement
         ]
 
 
 myElement : Element msg
 myElement =
     el
-        [ Background.color (E.rgb255 75 192 169)
-        , Font.color (E.rgb255 255 255 255)
+        [ Background.color (rgb255 75 192 169)
+        , Font.color (rgb255 255 255 255)
         , Border.rounded 10
-        , E.padding 30
+        , padding 30
         ]
-        (E.text "stylish!")
+        (text "stylish!")

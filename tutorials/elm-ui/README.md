@@ -146,6 +146,27 @@ You should expect to see:
 
 ![elm-ui-basic-layout](https://user-images.githubusercontent.com/194400/70663573-90cccb00-1c60-11ea-8a1c-71d15d2b83ad.png)
 
+If you open the elements tab of Dev Tools in your browser
+you will see the resulting HTML code:
+
+![generated-html](https://user-images.githubusercontent.com/194400/70760326-30fa2100-1d41-11ea-913d-d42fff663637.png)
+
+As far as generated HTML goes this is not too bad.
+
+
+<!--
+If you are curious what those `<s>` and `<u>` HTML elements are,
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/s
+<s> element renders text with a strikethrough, or a line through it.
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u
+The HTML Unarticulated Annotation Element (<u>)
+represents a span of inline text which should be rendered
+in a way that indicates that it has a non-textual annotation.
+
+-->
+
 Let's break down this code section by section:
 
 The first line is the standard `Elm` module (export) directive.
@@ -160,9 +181,10 @@ import Element.Background as Background
 import Element.Border as Border
 import Element.Font as Font
 ```
-These are fairly standard scoped `elm` import statements.
+These are fairly standard scoped `elm` `import` statements.
 
-We are covering 4 out of 9 of the available `elm-ui` modules.
+In this simple example we are using
+4 out of 9 of the available `elm-ui` modules.
 The one with the most features/functions is
 [`Elemenent`](https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest/Element)
 which contains everything you need for creating standard HTML elements
@@ -171,12 +193,86 @@ including their layout and positioning.
 [`Border`](https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest/Element-Border)
 and
 [`Font`](https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest/Element-Font)
-are _exactly_ what you would expect them to be.
+are _exactly_ what you would expect them to be,
+a collection functions related to styling those properties.
+We will cover each of these in more detail later on as needed,
+however I encourage you to click the links
+and scroll through available functions
+to get an idea for what they can do.
+
+#### The `main` function
+
+Let's continue looking at the 3 sections of code.
+`main` assembles the rest of the code so it can be exposed
+to the `elm` compiler.
+
+
+```elm
+main =
+    Element.layout []
+        rowOfStuff
+```
+This function creates an `Element.layout`
+
+
+
+#### Side Note on Naming Conventions
+
+Naming the entry point function `main` is not just a _convention_,
+it's a compiler requirement.
+If you try renaming `main` to something else in both places it appears,
+your code won't compile.
+You will see the following error message
+in your browser (_running `elm reactor`_):
+
+![main-not-defined](https://user-images.githubusercontent.com/194400/70759502-8123b400-1d3e-11ea-8ee9-2c1751455a6d.png)
+
+And the following compiler warning if you attempt to compile it:
+
+![compiler-warning-no-main](https://user-images.githubusercontent.com/194400/70759831-8df4d780-1d3f-11ea-8369-b12108062f16.png)
+
+This is a _good_ thing, because it means all `elm` programs are consistent.
+You won't see the `main` function of a program being named `app` or `myfunc`
+which means there are fewer changes of confusion for beginners.
+
+
+
+####
+
+
+```elm
+rowOfStuff : Element msg
+rowOfStuff =
+    row [ width fill, centerY, spacing 30 ]
+        [ myElement
+        , el [ centerX ] myElement
+        , el [ alignRight ] myElement
+        ]
+```
+
+
+
+```elm
+myElement : Element msg
+myElement =
+    el
+        [ Background.color (rgb255 75 192 169)
+        , Font.color (rgb255 255 255 255)
+        , Border.rounded 10
+        , padding 30
+        ]
+        (text "stylish!")
+```
 
 
 
 
-A note on long import lines:
+
+
+<br /><br /><br /><br />
+
+
+A quick note on long import lines:
 if you attempt to split the `import Element` declaration into two lines:
 ```elm
 import Element exposing (Element, alignRight, centerX, centerY, el, fill)
@@ -201,12 +297,12 @@ To:
 ```elm
 import Element as E exposing (Element, el, row)
 ```
-This only makes the top level elements `el` and `row` available
+This only makes the top level elements `el`, `layout` and `row` available
 for use in our view functions. The rest of the `elm-ui` functions
 need to be prefixed with `E` e.g: `E.functionName`.
 The advice from the creator of Elm
 and other experienced Elm devs is:
-avoid using uncontrolled import statements
+avoid using unqualified import statements
 e.g: `import Element exposing (..)`.
 It might be tempting in the short-run to just "import everything",
 but they rapidly become an unmaintainable headache.
@@ -217,14 +313,14 @@ The _full_ revised code would be:
 ```elm
 module Main exposing (main)
 
-import Element as E exposing (Element, el, row)
+import Element as E exposing (Element, el, layout, row)
 import Element.Background as Background
 import Element.Border as Border
 import Element.Font as Font
 
 
 main =
-    E.layout []
+    layout []
         rowOfStuff
 
 
@@ -252,6 +348,13 @@ Some people might feel that this tedious because it's more to type.
 However it's _immediately_ clear where a given function "comes from"
 and there is a much lower risk of naming conflicts.
 
+We will be adopting this `E.` prefix approach
+for the remainder of this tutorial
+because it's the method recommended/used by Evan.
+
+> See "Using Modules" section at the end of:
+https://guide.elm-lang.org/webapps/modules.html
+
 <!--
 Consider the following scenario:
 Your App has a _dynamic_ (_or "responsive"_) navigation view function
@@ -269,6 +372,20 @@ nav width =
 ```
 -->
 
+```elm
+rowOfStuff : Element msg
+rowOfStuff =
+    row
+        [ E.width E.fill
+        , E.centerY
+        , E.paddingXY 42 10
+        , Background.color (E.rgb255 215 219 218)
+        ]
+        [ myElement
+        , el [ E.centerX ] myElement
+        , el [ E.alignRight ] myElement
+        ]
+```
 
 
 
@@ -276,6 +393,12 @@ nav width =
 
 
 
+
+
+
+### Debugging Layout with `Element.explain Debug.todo`
+
+[Debug](https://package.elm-lang.org/packages/elm-lang/core/3.0.0/Debug)
 
 
 
@@ -310,10 +433,6 @@ e.g: https://www.google.com/search?q=%234bc0a9 <br />
 A color explorer site like Color Hexa has even more detail.
 e.g: https://color-hex.org/color/4bc0a9
 
-
-### Debugging Layout with `Element.explain Debug.todo`
-
-[Debug](https://package.elm-lang.org/packages/elm-lang/core/3.0.0/Debug)
 
 <br /><br />
 
