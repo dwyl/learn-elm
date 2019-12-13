@@ -30,6 +30,8 @@ with compile-time guarantees.
 https://github.com/mdgriffith/elm-ui
 + Elm Package:
 https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest
++ Examples:
+https://github.com/mdgriffith/elm-ui/tree/master/examples
 
 Matthew Griffith described it eloquently in his Elm Conf talk
 "Building a Toolkit for Design":
@@ -149,9 +151,18 @@ You should expect to see:
 If you open the elements tab of Dev Tools in your browser
 you will see the resulting HTML code:
 
-![generated-html](https://user-images.githubusercontent.com/194400/70760326-30fa2100-1d41-11ea-913d-d42fff663637.png)
+![generated-html](https://user-images.githubusercontent.com/194400/70762204-b08aee80-1d47-11ea-9d5f-bd8e121a42d8.png)
 
-As far as generated HTML goes this is not too bad.
+As far as generated HTML goes this is not _too_ bad.
+The in-line CSS classes are generated at compile time
+and included in `<style>` blocks.
+Semantic class names are inserted into the `<div>` elements.
+For a list of these class names, see:
+[`Style.elm#L131`](https://github.com/mdgriffith/elm-ui/blob/53a2732d9533c242c7690e16506b673af982032a/src/Internal/Style.elm#L131).
+Under the hood `elm-ui` is just using
+[`elm/html`](https://github.com/mdgriffith/elm-ui/blob/53a2732d9533c242c7690e16506b673af982032a/src/Element.elm#L215)
+(_the core html package_) so the resulting rendered html
+should be pretty similar to standard a `elm` view.
 
 
 <!--
@@ -164,24 +175,30 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u
 The HTML Unarticulated Annotation Element (<u>)
 represents a span of inline text which should be rendered
 in a way that indicates that it has a non-textual annotation.
-
 -->
 
-Let's break down this code section by section:
+Let's break down the `elm` code section by section:
 
-The first line is the standard `Elm` module (export) directive.
+The first line is the standard `elm` module (export) directive.
+
 ```elm
 module Main exposing (main)
 ```
 
+This needs to be here for the `elm` compiler to know the entry point.
+
 The next section are the imports:
+
 ```elm
 import Element exposing (Element, alignRight, centerX, centerY, el, fill, padding, rgb255, row, spacing, text, width)
 import Element.Background as Background
 import Element.Border as Border
 import Element.Font as Font
 ```
-These are fairly standard scoped `elm` `import` statements.
+
+These are fairly standard scoped `elm` `import` statements
+they should be familiar to anyone who has read the
+[elm guide](https://guide.elm-lang.org/).
 
 In this simple example we are using
 4 out of 9 of the available `elm-ui` modules.
@@ -200,7 +217,7 @@ however I encourage you to click the links
 and scroll through available functions
 to get an idea for what they can do.
 
-#### The `main` function
+### The `main` function
 
 Let's continue looking at the 3 sections of code.
 `main` assembles the rest of the code so it can be exposed
@@ -213,7 +230,20 @@ main =
         rowOfStuff
 ```
 This function creates an `Element.layout`
-
+which is the root node for your app/view.
+It has the class of `ui` which has the following definition:
+```css
+.ui {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    z-index: 0;
+}
+```
+In this case it takes up the full width and height of the view port.
+But it could also be used for just a portion of the screen
+if you are just getting started using `elm` at
+[work](https://elm-lang.org/news/how-to-use-elm-at-work)
 
 
 #### Side Note on Naming Conventions
@@ -237,8 +267,9 @@ which means there are fewer changes of confusion for beginners.
 
 
 
-####
+### Row Of Elements
 
+`row` is a layout wrapper function for holding other elements in a row.
 
 ```elm
 rowOfStuff : Element msg
@@ -250,7 +281,62 @@ rowOfStuff =
         ]
 ```
 
+the `row` function creates a `<div>` with the CSS class `r`.
+Which is defined as:
+```css
+.r {
+    display: flex;
+    flex-direction: row;
+}
+```
+`display:flex` has full support on all modern/recent web browsers.
+see: https://caniuse.com/#feat=mdn-css_properties_display_flex <br />
+More detail:
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
 
+```elm
+row [ width fill, centerY, spacing 30 ]
+```
+The first argument to `row` is a `list` of attributes.
+In this case `width fill` means the
+row should occupy the full width of the viewpor.
+`centerY` means the row should be vertically aligned to the center of the page.
+`spacing 30` is the spacing between the row elements,
+in this case a _minimum_ of `30px`.
+
+![spacing-vs-padding](https://user-images.githubusercontent.com/194400/70792908-287e0680-1d92-11ea-9971-77e440d99c4d.png)
+
+If you constrain the window you will see the `spacing 30` in action:
+
+![minimum-spacing](https://user-images.githubusercontent.com/194400/70793014-52372d80-1d92-11ea-8090-fb7b6316b8eb.png)
+
+It preserves the spacing between elements so it always looks good.
+We will see a more real-world example of this later.
+
+
+The _second_ argument to the `row` function is a `list` child nodes.
+
+```elm
+[ myElement
+, el [ centerX ] myElement
+, el [ alignRight ] myElement
+]
+```
+The first `myElement` has no style/position applied to it
+so it will just appear on the left of the row.
+the next `myElelement` is wrapped in a container `el` (`<div>`)
+and given an attribute of `centerX` to ensure that it is
+centered _horizontally_ in the middle of the page.
+The third `myElement` is also wrapped in an `el`
+and given the
+
+
+
+#### Individual Element
+
+The `myElement` function uses the `el` function
+to create a `<div>` element with specific attributes
+and a child `text` node with the text "stylish!" in it.
 
 ```elm
 myElement : Element msg
@@ -443,7 +529,8 @@ e.g: https://color-hex.org/color/4bc0a9
 https://github.com/lucamug/style-framework
 + Elm UI Explorer (Style Guide):
 https://package.elm-lang.org/packages/kalutheo/elm-ui-explorer/4.0.0/
-
++ Brief intro to `elm-ui`
+https://orasund.gitbook.io/elm-cookbook/frameworks-1/elm-ui-1
 
 <br /><br />
 
