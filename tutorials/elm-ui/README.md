@@ -314,7 +314,8 @@ It preserves the spacing between elements so it always looks good.
 We will see a more real-world example of this later.
 
 
-The _second_ argument to the `row` function is a `list` child nodes.
+The _second_ argument to the `row` function
+is a `list` child of nodes:
 
 ```elm
 [ myElement
@@ -336,6 +337,12 @@ aligns the element to right of the parent element.
 
 #### Individual Element
 
+in `elm-ui` the **`el`** is a general purpose "container" element
+similar to `<div>` in HTML.
+`el` is used to apply styles/properties
+to the child elements it contains.
+The _first_ argument to the `el` function
+is a list of the style attributes to be applied.
 The `myElement` function uses the `el` function
 to create a `<div>` element with specific attributes
 and a child `text` node with the text "stylish!" in it.
@@ -352,11 +359,8 @@ myElement =
         (text "stylish!")
 ```
 
-**`el`** is a general purpose "container" element
-that is used to apply styles/properties
-to the child elements it contains.
 In this case the **`el`**
-has a list with the following attributes:
+a list with the following attributes:
 
 ```elm
 [ Background.color (rgb255 75 192 169)
