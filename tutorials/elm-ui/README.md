@@ -59,9 +59,9 @@ In this case I have attempted to apply a `Float` of 2.5 to the `Border.rounded` 
 The same thing goes if I attempt to pass a `String` to `Border.rounded` e.g: `"2px"`
 ![image](https://user-images.githubusercontent.com/194400/70662334-ec498980-1c5d-11ea-9336-56f30db80270.png)
 We get a type mismatch and know _exactly_ what needs to be fixed
-in order for our view to compile.
+for our view to compile.
 
-If you make a typo in your layout/style it's won't compile:
+If you make a typo in your layout/style it won't compile:
 
 ![elm-ui-paddign-error](https://user-images.githubusercontent.com/194400/70667023-caed9b00-1c67-11ea-8396-0bf47d87a7d0.png)
 
@@ -328,7 +328,9 @@ the next `myElelement` is wrapped in a container `el` (`<div>`)
 and given an attribute of `centerX` to ensure that it is
 centered _horizontally_ in the middle of the page.
 The third `myElement` is also wrapped in an `el`
-and given the
+which has the `alignRight` attribute,
+which as it's name suggests,
+aligns the element to right of the parent element.
 
 
 
@@ -350,16 +352,38 @@ myElement =
         (text "stylish!")
 ```
 
+**`el`** is a general purpose "container" element
+that is used to apply styles/properties
+to the child elements it contains.
+In this case the **`el`**
+has a list with the following attributes:
+
+```elm
+[ Background.color (rgb255 75 192 169)
+, Font.color (rgb255 255 255 255)
+, Border.rounded 10
+, padding 30
+]
+```
++ `Background.color (rgb255 75 192 169)` - Apply a **`teal`** background color
+to the `el`.
++ `Font.color (rgb255 255 255 255)` - use a **`white`** font color.
++ `Border.rounded 10` - round the borders of all four corners of the `el`.
++ `padding 30` - apply a padding between the outside of the `el` and the `text`.
+
+
+> If _anything_ is unclear about this initial example of using `elm-ui`,
+please
+[_ask_ questions](https://github.com/dwyl/learn-elm/issues)
+so that we can clarify for _everyone_ reading.
 
 
 
+#### A Note on Long `import` lines
 
-
-<br /><br /><br /><br />
-
-
-A quick note on long import lines:
-if you attempt to split the `import Element` declaration into two lines:
+You may have noticed that the import line for the `Element` module
+is rather long, and the more `elm-ui` features you use the longer it will get!
+If you attempt to split the `import Element` declaration into two lines:
 ```elm
 import Element exposing (Element, alignRight, centerX, centerY, el, fill)
 import Element exposing (padding, rgb255, row, spacing, text, width)
@@ -440,40 +464,6 @@ because it's the method recommended/used by Evan.
 
 > See "Using Modules" section at the end of:
 https://guide.elm-lang.org/webapps/modules.html
-
-<!--
-Consider the following scenario:
-Your App has a _dynamic_ (_or "responsive"_) navigation view function
-that changes depending on the `width` of the viewport (_screen_).
-The signature of the function might be something like this:
-
-```elm
-nav : Int -> Html Msg
-nav width =
-  if width > 600 then
-    E.row [ E.width E.fill]
-  else
-    -- something else
-    -- TODO: paste example of responsive Nav once we've created it!
-```
--->
-
-```elm
-rowOfStuff : Element msg
-rowOfStuff =
-    row
-        [ E.width E.fill
-        , E.centerY
-        , E.paddingXY 42 10
-        , Background.color (E.rgb255 215 219 218)
-        ]
-        [ myElement
-        , el [ E.centerX ] myElement
-        , el [ E.alignRight ] myElement
-        ]
-```
-
-
 
 
 
