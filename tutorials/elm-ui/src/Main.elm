@@ -7,7 +7,7 @@ import Element.Font as Font
 
 
 main =
-    Element.layout []
+    Element.layout [ Element.explain Debug.todo ]
         rowOfStuff
 
 

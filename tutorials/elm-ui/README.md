@@ -9,13 +9,15 @@ to change _one_ style on a single element
 without affecting any others.
 For the past few years we have been using the Tachyons library
 see: https://github.com/dwyl/learn-tachyons
-Using Tachyons in dosens of projects
-has been _good_ in small teams (_max 8 people_).
-However we have found that even with a functional CSS library
+and it's been a breath of fresh air.
+Using Tachyons in dozens of projects
+has been _good_ in small teams (_max 8 people_)
+and we have had far fewer UI bugs than before adopting Tachyons.
+_However_ we have found that even with a functional CSS library
 (_that greatly reduces the possibility of cascading side effects_),
 we still see redundant and unnecessary styles
-and occasionally visual bugs are introduced that go undetected.
-No CSS library we know of offers compile-time guarantees
+and _occasionally_ visual bugs are introduced that go undetected.
+No CSS library or pre-processor we know of offers compile-time guarantees
 that the layout/styles applied to a given element are _correct_.
 That's where `elm-ui` comes in and changes the game!
 
@@ -26,12 +28,9 @@ That's where `elm-ui` comes in and changes the game!
 for building semantic UI
 with compile-time guarantees.
 
-+ GitHub:
-https://github.com/mdgriffith/elm-ui
-+ Elm Package:
-https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest
-+ Examples:
-https://github.com/mdgriffith/elm-ui/tree/master/examples
+_This_ tutorial aims to take a complete beginner
+who has never seen any `elm-ui` to a basic understanding.
+
 
 Matthew Griffith described it eloquently in his Elm Conf talk
 "Building a Toolkit for Design":
@@ -51,13 +50,16 @@ that your layout and styles work as expected.
 You will see _helpful_ compiler errors/warnings
 if you attempt to make a _breaking_ change to UI!
 
+
 ### Example Compile Time Warnings
 
-In this case I have attempted to apply a `Float` of 2.5 to the `Border.rounded` (`border-radius`) property:
-![image](https://user-images.githubusercontent.com/194400/70662062-69283380-1c5d-11ea-8d90-1d4f72d67ec6.png)
+In this case I have attempted to apply a `Float`
+of `2.5` to the `Border.rounded` (`border-radius`) property:
+![elm-ui-compilation-error-float](https://user-images.githubusercontent.com/194400/70662062-69283380-1c5d-11ea-8d90-1d4f72d67ec6.png)
 
-The same thing goes if I attempt to pass a `String` to `Border.rounded` e.g: `"2px"`
-![image](https://user-images.githubusercontent.com/194400/70662334-ec498980-1c5d-11ea-9336-56f30db80270.png)
+The same thing goes if we attempt to pass a `String`
+to `Border.rounded` e.g: `"2px"`
+![elm-ui-compiler-error-string](https://user-images.githubusercontent.com/194400/70662334-ec498980-1c5d-11ea-9336-56f30db80270.png)
 We get a type mismatch and know _exactly_ what needs to be fixed
 for our view to compile.
 
@@ -66,9 +68,9 @@ If you make a typo in your layout/style it won't compile:
 ![elm-ui-paddign-error](https://user-images.githubusercontent.com/194400/70667023-caed9b00-1c67-11ea-8396-0bf47d87a7d0.png)
 
 Hopefully that gives you a _taste_
-for the compiler warnings provided by `elm-ui`.
+for the compiler warnings provided by `elm-ui`. <br />
 The best way to experience this further
-is to start
+is to fire up your text editor and start coding!
 
 
 ## _How?_ 📝
@@ -79,7 +81,7 @@ elm init
 ```
 
 That will create an `elm.json` file similar to this one:
-[`elm.json`]()
+[`elm.json`](https://github.com/dwyl/learn-elm/blob/master/tutorials/elm-ui/elm.json)
 
 Next we will add the dependency for `mdgriffith/elm-ui`:
 ```sh
@@ -92,7 +94,7 @@ until you attempt to compile the app.
 
 
 Now create a directory called `src`
-and a new file in the directory `src/Main.elm`.
+and a new file in the directory `src/Main.elm`. <br />
 Next _type_ (_or copy-paste_) the following code
 into the `src/Main.elm` file:
 
@@ -131,9 +133,9 @@ myElement =
 ```
 
 > This is the canonical example in the docs:
-https://github.com/mdgriffith/elm-ui
+https://github.com/mdgriffith/elm-ui <br />
 If you are unable to run the code on your `localhost`
-try the Ellie version: https://ellie-app.com/3f2n4J5RnT3a1
+try the Ellie version: https://ellie-app.com/7vDrXpCckNWa1
 
 In your terminal run:
 
@@ -337,7 +339,8 @@ aligns the element to right of the parent element.
 
 #### Individual Element
 
-in `elm-ui` the **`el`** is a general purpose "container" element
+In `elm-ui` the **`el`** function
+is a general purpose "container" element
 similar to `<div>` in HTML.
 `el` is used to apply styles/properties
 to the child elements it contains.
@@ -478,7 +481,25 @@ https://guide.elm-lang.org/webapps/modules.html
 
 ### Debugging Layout with `Element.explain Debug.todo`
 
+Using elm's built in
 [Debug](https://package.elm-lang.org/packages/elm-lang/core/3.0.0/Debug)
+functionality,
+`elm-ui` allows you to _visually_ debug your UI
+simply by adding the following function call
+as an element in the attributes list of any `el` call.
+
+Take the example above and add `Element.explain Debug.todo`
+in the list:
+
+```elm
+main =
+    layout [Element.explain Debug.todo]
+        rowOfStuff
+```
+
+
+
+
 
 
 
@@ -518,6 +539,13 @@ e.g: https://color-hex.org/color/4bc0a9
 
 ## References and Recommended Reading
 
+
++ GitHub Project:
+https://github.com/mdgriffith/elm-ui
++ Elm Package:
+https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest
++ Examples:
+https://github.com/mdgriffith/elm-ui/tree/master/examples
 + `elm-ui` _examples_: https://github.com/bburdette/elm-ui-examples
 + Style framework (_built on `elm-ui`_):
 https://github.com/lucamug/style-framework
@@ -532,7 +560,8 @@ https://orasund.gitbook.io/elm-cookbook/frameworks-1/elm-ui-1
 
 
 People who are learning `CSS`
-(_or those who are too impatient to learn and just want it to "work now!"_),
+(_or those who are too busy/impatient to learn
+  and just want it to "work now!"_),
 often end up feeling like `CSS` is a wild beast that cannot be tamed.
 There's a _reason_ why searching for
 ["CSS gif"](https://www.google.com/search?q=css+gif&tbm=isch)
