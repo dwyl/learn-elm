@@ -172,6 +172,9 @@ you will see the resulting HTML code:
 ![generated-html](https://user-images.githubusercontent.com/194400/70762204-b08aee80-1d47-11ea-9d5f-bd8e121a42d8.png)
 
 As far as generated HTML goes this is not _too_ bad.
+It's common for `elm` apps to get a 100 score for accessibility,
+speed, SEO and progressiveness on Google's
+[Lighthouse Score](https://developers.google.com/web/tools/lighthouse).
 The in-line CSS classes are generated at compile time
 and included in `<style>` blocks.
 Semantic class names are inserted into the `<div>` elements.
@@ -195,6 +198,9 @@ represents a span of inline text which should be rendered
 in a way that indicates that it has a non-textual annotation.
 -->
 
+### Code _Explanation_
+
+
 Let's break down the `elm` code section by section:
 
 The first line is the standard `elm` module (export) directive.
@@ -204,6 +210,9 @@ module Main exposing (main)
 ```
 
 This needs to be here for the `elm` compiler to know the entry point.
+You will have seen this line all throughout the
+[elm guide](https://guide.elm-lang.org).
+More detail is given below on the `main` function.
 
 The next section are the imports:
 
