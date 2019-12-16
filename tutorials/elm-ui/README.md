@@ -1,18 +1,35 @@
 # `elm-ui` a Language for _Reliable_ Layout and Interface
 
+_This_ tutorial aims to take a complete beginner -
+who has never seen any `elm-ui` -
+to a basic understanding in 10 minutes.
+
 
 ## _Why?_ 🤷 ... 😢 🌧  `|>` 😍🌈
 
-@dwyl we _love_ the idea of having semantic and functional UIs
-with no side-effects. Functional CSS allows anyone
+Few people _love_ writing CSS.
+Most people just want to build their App's layout
+_without_ the headache of knowing how to position things.
+`elm-ui` lets you build beautiful, fast and responsive UIs in `elm`,
+without writing _any_ CSS.
+But `elm-ui` goes _way_ beyond offering a design system,
+because it's built using pure `elm` functions,
+it gives you compile-time guarantees that your layout/styles
+are valid. So not only is it easier/faster to build the UI,
+it makes extending and _maintaining_ your App _effortless_!
+
+> @dwyl we _love_ the idea of having semantic, functional and responsive UIs
+with no side-effects. <br />
+**Functional CSS** libraries allow anyone on a team
 to change _one_ style on a single element
-without affecting any others.
+without affecting any others. <br />
 For the past few years we have been using the Tachyons library
-see: https://github.com/dwyl/learn-tachyons
+see:
+[github.com/dwyl/**learn-tachyons**](https://github.com/dwyl/learn-tachyons)
 and it's been a breath of fresh air.
 Using Tachyons in dozens of projects
-has been _good_ in small teams (_max 8 people_)
-and we have had far fewer UI bugs than before adopting Tachyons.
+has been _good_ in small teams (_0-12 people_)
+and we have had _far_ fewer UI bugs than before adopting Tachyons.
 _However_ we have found that even with a functional CSS library
 (_that greatly reduces the possibility of cascading side effects_),
 we still see redundant and unnecessary styles
@@ -27,9 +44,6 @@ That's where `elm-ui` comes in and changes the game!
 `elm-ui` is a design system
 for building semantic UI
 with compile-time guarantees.
-
-_This_ tutorial aims to take a complete beginner
-who has never seen any `elm-ui` to a basic understanding.
 
 
 Matthew Griffith described it eloquently in his Elm Conf talk
