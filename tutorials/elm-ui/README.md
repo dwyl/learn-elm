@@ -11,13 +11,14 @@ to a basic understanding in 10 minutes.
 Few people _love_ writing CSS.
 Most people just want to build their App
 _without_ the headache of knowing how to position things.
-**`elm-ui`** lets you build beautiful, fast and responsive UIs in `elm`,
+**`elm-ui`** lets you build beautiful,
+fast and responsive UIs in `elm`,
 without writing _any_ CSS!
-But `elm-ui` goes _way_ beyond offering a design system.
+But `elm-ui` goes _way_ beyond _just a design system.
 Since it's built using pure `elm` functions,
-it gives you compile-time guarantees that your layout/styles
+it gives you ***compile-time guarantees*** that your layout/styles
 are valid. So not only is it easier/faster to build the UI,
-it makes extending and _maintaining_ your App _effortless_!
+it makes **extending and _maintaining_** your App ***effortless***!
 
 > @dwyl we _love_ the idea of having semantic, functional and responsive UIs
 with no side-effects. <br />
@@ -440,14 +441,14 @@ import Element exposing (Element, alignRight, centerX, centerY, el, fill, paddin
 To:
 
 ```elm
-import Element as E exposing (Element, el, row)
+import Element as E exposing (Element, el, layout, row)
 ```
 This only makes the top level elements `el`, `layout` and `row` available
 for use in our view functions. The rest of the `elm-ui` functions
 need to be prefixed with `E` e.g: `E.functionName`.
 The advice from the creator of Elm
 and other experienced Elm devs is:
-avoid using unqualified import statements
+"_avoid using unqualified import statements_"
 e.g: `import Element exposing (..)`.
 It might be tempting in the short-run to just "import everything",
 but they rapidly become an unmaintainable headache.
@@ -493,8 +494,7 @@ Some people might feel that this tedious because it's more to type.
 However it's _immediately_ clear where a given function "comes from"
 and there is a much lower risk of naming conflicts.
 
-We will be adopting this `E.` prefix approach
-for the remainder of this tutorial
+We recommend adopting this `E.` prefix approach
 because it's the method recommended/used by Evan.
 
 > See "Using Modules" section at the end of:
@@ -517,7 +517,7 @@ simply by adding the following function call
 as an element in the attributes list of any `el` call.
 
 Take the example above and add `Element.explain Debug.todo`
-in the list of attributes for the `layout` function::
+in the list of attributes for the `layout` function:
 
 ```elm
 main =
@@ -570,6 +570,22 @@ rowOfStuff =
 ```
 
 This allows us to pinpoint the _single_ `el` in the `row` if we need to.
+
+<br />
+
+<hr />
+
+# Want _More_?
+
+If you enjoyed learning the basics of `elm-ui`
+and want to learn a _lot_ more,
+please drop a comment/like
+on the following issue:
+https://github.com/dwyl/learn-elm/issues/152
+
+
+<hr />
+
 
 
 <br /><br />
