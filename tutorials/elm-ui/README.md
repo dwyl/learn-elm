@@ -626,7 +626,7 @@ returns this mess as the top result:
 In reality, CSS _can_ be learned/mastered reasonably quickly
 and _amazing_ things can be crafted. <br />
 e.g:
-http://www.csszengarden.com and https://www.cssdesignawards.com <br /> or
+http://www.csszengarden.com and https://www.cssdesignawards.com or
 CSS Super Powers: https://youtu.be/mNKz3devFAw and _drawing_ in CSS:
 https://medium.com/coding-artist/a-beginners-guide-to-pure-css-images-ef9a5d069dd2
 
