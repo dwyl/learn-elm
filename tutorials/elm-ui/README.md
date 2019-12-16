@@ -572,23 +572,19 @@ rowOfStuff =
 This allows us to pinpoint the _single_ `el` in the `row` if we need to.
 
 <br />
-
 <hr />
 
 # Want _More_?
 
 If you enjoyed learning the basics of `elm-ui`
-and want to learn a _lot_ more,
+and want to learn a _lot_ more by building a complete app, <br />
 please drop a comment/like
 on the following issue:
 https://github.com/dwyl/learn-elm/issues/152
 
 
 <hr />
-
-
-
-<br /><br />
+<br />
 
 ## References and Recommended Reading
 
@@ -630,7 +626,9 @@ returns this mess as the top result:
 In reality, CSS _can_ be learned/mastered reasonably quickly
 and _amazing_ things can be crafted. <br />
 e.g:
-http://www.csszengarden.com and https://www.cssdesignawards.com <br />
+http://www.csszengarden.com and https://www.cssdesignawards.com <br /> or
+CSS Super Powers: https://youtu.be/mNKz3devFAw and _drawing_ in CSS:
+https://medium.com/coding-artist/a-beginners-guide-to-pure-css-images-ef9a5d069dd2
 
 Sadly, it doesn't matter how well
 _you_ - the conscientious developer/designer - learn CSS.
@@ -684,8 +682,7 @@ If the _system_ you are using to create your layout/styles
 does not give you any consistency guarantees at compilation time,
 then you don't _have_ a good enough system and chaos is _guaranteed_.
 
-
-<br /><br />
+<br />
 
 ### Drawbacks?
 
