@@ -312,18 +312,18 @@ see: https://caniuse.com/#feat=mdn-css_properties_display_flex <br />
 More detail:
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
 
-The first argument to `row` is a `list` of attributes.
+The first argument to `row` is a `list` of attributes:
 
 ```elm
 row [ width fill, centerY, spacing 30 ]
 ```
 
 In this case `width fill` means the
-row should occupy the full width of the viewport.
+row should occupy the full width of the viewport. <br />
 `centerY` means the row should be _vertically_ aligned
-to the center of the page.
+to the center of the page. <br />
 `spacing 30` is the spacing between the row elements,
-in this case a _minimum_ of `30px`.
+in this case a _minimum_ of `30 pixels`.
 
 ![spacing-vs-padding](https://user-images.githubusercontent.com/194400/70792908-287e0680-1d92-11ea-9971-77e440d99c4d.png)
 
@@ -508,7 +508,7 @@ simply by adding the following function call
 as an element in the attributes list of any `el` call.
 
 Take the example above and add `Element.explain Debug.todo`
-in the list:
+in the list of attributes for the `layout` function::
 
 ```elm
 main =
@@ -516,11 +516,51 @@ main =
         rowOfStuff
 ```
 
+The result is a gold border around the whole of the `layout` container element:
 
+![element.explain-Debug.todo](https://user-images.githubusercontent.com/194400/70936533-62713600-203a-11ea-8101-5df5a9c07709.png)
 
+This also added a dashed border around the `row` element.
 
+If we instead move the `Element.explain Debug.todo`
+to the List of attributes for the `row`:
 
+```elm
+rowOfStuff : Element msg
+rowOfStuff =
+    row [ width fill, centerY, spacing 30, Element.explain Debug.todo ]
+        [ myElement
+        , el [ centerX ] myElement
+        , el [ alignRight ] myElement
+        ]
+```
 
+The result is:
+
+![debug-row](https://user-images.githubusercontent.com/194400/70936813-0d81ef80-203b-11ea-9c86-078e5dfb2164.png)
+
+This has applied the **gold** border to the **`row`**
+and dashed border to the individual row items.
+You will notice that because two the _children_ of the `row`
+are in fact `el` (_container/wrapper_) elements
+which then contain the `myElement` (`el`),
+when the `Element.explain` is applied to the `row`,
+it adds a _double_ dashed border to the elements that are nested.
+
+Our final debug option is to apply `Element.explain` debugging
+to just a _single_ `el` in the `row`:
+
+```elm
+rowOfStuff : Element msg
+rowOfStuff =
+    row [ width fill, centerY, spacing 30 ]
+        [ myElement
+        , el [ centerX, Element.explain Debug.todo ] myElement
+        , el [ alignRight ] myElement
+        ]
+```
+
+This allows us to pinpoint the _single_ `el` in the `row` if we need to.
 
 
 <br /><br />
@@ -534,7 +574,8 @@ e.g:
 Background.color (rgb255 75 192 169)
 ```
 
-If I attempt to invoke `rgb255 75, 192, 169` I will see the following error:
+If we attempt to invoke `rgb255 75, 192, 169`
+we will see the following error:
 
 ![elm-ui-rgb-error](https://user-images.githubusercontent.com/194400/70663222-cfae5100-1c5f-11ea-8fa6-6d4437e3af14.png)
 

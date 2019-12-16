@@ -7,7 +7,7 @@ import Element.Font as Font
 
 
 main =
-    Element.layout [ Element.explain Debug.todo ]
+    Element.layout []
         rowOfStuff
 
 
@@ -15,7 +15,7 @@ rowOfStuff : Element msg
 rowOfStuff =
     row [ width fill, centerY, spacing 30 ]
         [ myElement
-        , el [ centerX ] myElement
+        , el [ centerX, Element.explain Debug.todo ] myElement
         , el [ alignRight ] myElement
         ]
 
