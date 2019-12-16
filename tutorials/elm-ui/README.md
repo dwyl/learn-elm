@@ -198,7 +198,7 @@ represents a span of inline text which should be rendered
 in a way that indicates that it has a non-textual annotation.
 -->
 
-### Code _Explanation_
+### Code _Explanation_
 
 
 Let's break down the `elm` code section by section:
@@ -224,8 +224,8 @@ import Element.Font as Font
 ```
 
 These are fairly standard scoped `elm` `import` statements
-they should be familiar to anyone who has read the
-[elm guide](https://guide.elm-lang.org/).
+they should be familiar to anyone who has read the **Modules** section of the
+[elm guide](https://guide.elm-lang.org/webapps/modules.html).
 
 In this simple example we are using
 4 out of 9 of the available `elm-ui` modules.
