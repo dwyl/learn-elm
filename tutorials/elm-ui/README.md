@@ -590,38 +590,6 @@ https://github.com/dwyl/learn-elm/issues/152
 
 <br /><br />
 
-### Drawbacks
-
-`Colors` have to be specified in terms of **rgb** values.
-i.e. you need to supply the individual values for `Red` `Blue` `Green` as `Int`.
-e.g:
-```elm
-Background.color (rgb255 75 192 169)
-```
-
-If we attempt to invoke `rgb255 75, 192, 169`
-we will see the following error:
-
-![elm-ui-rgb-error](https://user-images.githubusercontent.com/194400/70663222-cfae5100-1c5f-11ea-8fa6-6d4437e3af14.png)
-
-This is a _small_ price to pay given that it allows us to _easily_
-implement a color picker allowing people to easily select _any_ color
-when they are [_categorising_](https://github.com/dwyl/app/issues/235)
-
-![color-picker-dwyl-teal](https://user-images.githubusercontent.com/194400/70664979-72b49a00-1c63-11ea-80f4-fc533948f60f.png)
-
-In the short-term if we have a _hex_ value e.g: `#4bc0a9`
-that we need to convert to RGB,
-~~simply use a free online tool:
-https://www.rapidtables.com/convert/color/hex-to-rgb.html~~
-pasting the _hex_ into google returns the RGB conversion.
-e.g: https://www.google.com/search?q=%234bc0a9 <br />
-A color explorer site like Color Hexa has even more detail.
-e.g: https://color-hex.org/color/4bc0a9
-
-
-<br /><br />
-
 ## References and Recommended Reading
 
 
@@ -715,3 +683,39 @@ the problem is the (_lack of a_) _system_.
 If the _system_ you are using to create your layout/styles
 does not give you any consistency guarantees at compilation time,
 then you don't _have_ a good enough system and chaos is _guaranteed_.
+
+
+<br /><br />
+
+### Drawbacks?
+
+So far in using `elm-ui` we have only spotted one potential drawback.
+All `Colors` (_for text, borders or backgrounds_)
+have to be specified in terms of **rgb** values.
+i.e. you need to supply the individual values for `Red` `Blue` `Green` as `Int`.
+e.g:
+```elm
+Background.color (rgb255 75 192 169)
+```
+
+If we attempt to invoke `rgb255 75, 192, 169`
+we will see the following error:
+
+![elm-ui-rgb-error](https://user-images.githubusercontent.com/194400/70663222-cfae5100-1c5f-11ea-8fa6-6d4437e3af14.png)
+
+We feel this is a _comparatively small_ price to pay
+given that it means colors can be checked at compile time.
+It allows us to _easily_
+implement a color picker allowing people to easily select _any_ color
+when they are [_categorising_](https://github.com/dwyl/app/issues/235)
+
+![color-picker-dwyl-teal](https://user-images.githubusercontent.com/194400/70664979-72b49a00-1c63-11ea-80f4-fc533948f60f.png)
+
+In the short-term if we have a _hex_ value e.g: `#4bc0a9`
+that we need to convert to RGB,
+~~simply use a free online tool:
+https://www.rapidtables.com/convert/color/hex-to-rgb.html~~
+pasting the _hex_ into google returns the RGB conversion.
+e.g: https://www.google.com/search?q=%234bc0a9 <br />
+A color explorer site like Color Hexa has even more detail.
+e.g: https://color-hex.org/color/4bc0a9
