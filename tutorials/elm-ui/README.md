@@ -4,16 +4,17 @@ _This_ tutorial aims to take a complete beginner -
 who has never seen any `elm-ui` -
 to a basic understanding in 10 minutes.
 
+<br />
 
 ## _Why?_ 🤷 ... 😢 🌧  `|>` 😍🌈
 
 Few people _love_ writing CSS.
-Most people just want to build their App's layout
+Most people just want to build their App
 _without_ the headache of knowing how to position things.
-`elm-ui` lets you build beautiful, fast and responsive UIs in `elm`,
-without writing _any_ CSS.
-But `elm-ui` goes _way_ beyond offering a design system,
-because it's built using pure `elm` functions,
+**`elm-ui`** lets you build beautiful, fast and responsive UIs in `elm`,
+without writing _any_ CSS!
+But `elm-ui` goes _way_ beyond offering a design system.
+Since it's built using pure `elm` functions,
 it gives you compile-time guarantees that your layout/styles
 are valid. So not only is it easier/faster to build the UI,
 it makes extending and _maintaining_ your App _effortless_!
@@ -38,6 +39,7 @@ No CSS library or pre-processor we know of offers compile-time guarantees
 that the layout/styles applied to a given element are _correct_.
 That's where `elm-ui` comes in and changes the game!
 
+<br />
 
 ## _What?_ 💭
 
@@ -305,18 +307,21 @@ Which is defined as:
     flex-direction: row;
 }
 ```
-`display:flex` has full support on all modern/recent web browsers.
+`display:flex` has full support on all modern/recent web browsers. <br />
 see: https://caniuse.com/#feat=mdn-css_properties_display_flex <br />
 More detail:
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
 
+The first argument to `row` is a `list` of attributes.
+
 ```elm
 row [ width fill, centerY, spacing 30 ]
 ```
-The first argument to `row` is a `list` of attributes.
+
 In this case `width fill` means the
-row should occupy the full width of the viewpor.
-`centerY` means the row should be vertically aligned to the center of the page.
+row should occupy the full width of the viewport.
+`centerY` means the row should be _vertically_ aligned
+to the center of the page.
 `spacing 30` is the spacing between the row elements,
 in this case a _minimum_ of `30px`.
 
