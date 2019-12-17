@@ -14,7 +14,7 @@ _without_ the headache of knowing how to position things.
 **`elm-ui`** lets you build beautiful,
 fast and responsive UIs in `elm`,
 without writing _any_ CSS!
-But `elm-ui` goes _way_ beyond _just a design system.
+But `elm-ui` goes _way_ beyond _just_ a design system.
 Since it's built using pure `elm` functions,
 it gives you ***compile-time guarantees*** that your layout/styles
 are valid. So not only is it easier/faster to build the UI,
