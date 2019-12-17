@@ -15,7 +15,7 @@ rowOfStuff : Element msg
 rowOfStuff =
     row [ width fill, centerY, spacing 30 ]
         [ myElement
-        , el [ centerX, Element.explain Debug.todo ] myElement
+        , el [ centerX ] myElement
         , el [ alignRight ] myElement
         ]
 
