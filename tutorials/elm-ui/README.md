@@ -490,7 +490,7 @@ myElement =
         (E.text "stylish!")
 ```
 
-Some people might feel that this tedious because it's more to type.
+Some people might feel that this is tedious because it's more to type.
 However it's _immediately_ clear where a given function "comes from"
 and there is a much lower risk of naming conflicts.
 
