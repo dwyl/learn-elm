@@ -290,7 +290,7 @@ And the following compiler warning if you attempt to compile it:
 
 This is a _good_ thing, because it means all `elm` programs are consistent.
 You won't see the `main` function of a program being named `app` or `myfunc`
-which means there are fewer changes of confusion for beginners.
+which means there are fewer chances of confusion for beginners.
 
 
 
