@@ -355,7 +355,7 @@ is a `list` child of nodes:
 ```
 The first `myElement` has no style/position applied to it
 so it will just appear on the left of the row.
-the next `myElelement` is wrapped in a container `el` (`<div>`)
+the next `myElement` is wrapped in a container `el` (`<div>`)
 and given an attribute of `centerX` to ensure that it is
 centered _horizontally_ in the middle of the page.
 The third `myElement` is also wrapped in an `el`
