@@ -270,7 +270,7 @@ It has the class of `ui` which has the following definition:
 In this case it takes up the full width and height of the view port.
 But it could also be used for just a portion of the screen
 if you are just getting started using `elm` at
-[work](https://elm-lang.org/news/how-to-use-elm-at-work)
+[work](https://elm-lang.org/news/how-to-use-elm-at-work).
 
 
 #### Side Note on Naming Conventions
