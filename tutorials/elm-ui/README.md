@@ -223,7 +223,7 @@ import Element.Border as Border
 import Element.Font as Font
 ```
 
-These are fairly standard scoped `elm` `import` statements
+These are fairly standard scoped `elm` `import` statements and
 they should be familiar to anyone who has read the **Modules** section of the
 [elm guide](https://guide.elm-lang.org/webapps/modules.html).
 
