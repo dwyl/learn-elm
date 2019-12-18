@@ -429,7 +429,7 @@ The way to get around this is to follow the
 [`elm` guide modules](https://guide.elm-lang.org/webapps/modules.html)
 advice and avoid using `exposing` unless it's absolutely necessary.
 So we can convert the super-long import  
-(_which will only get longer as your view expands to include more style_):
+(_which will only get longer as your view expands to include more styles_),
 
 From:
 
