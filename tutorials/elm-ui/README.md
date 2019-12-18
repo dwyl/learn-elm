@@ -634,7 +634,7 @@ Sadly, it doesn't matter how well
 _you_ - the conscientious developer/designer - learn CSS.
 Unless you can ensure that _everyone_ in your team/company
 has the same level of skill and care in their work,
-it's _inevitable_ that over-time
+it's _inevitable_ that over time
 duplicate and _conflicting_ styles will be added.
 
 <div align="center">
