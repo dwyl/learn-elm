@@ -21,7 +21,7 @@ are valid. So not only is it easier/faster to build the UI,
 it makes **extending and _maintaining_** your App ***effortless***!
 
 > @dwyl we _love_ the idea of having semantic, functional and responsive UIs
-with no side-effects. <br />
+with no side effects. <br />
 **Functional CSS** libraries allow anyone on a team
 to change _one_ style on a single element
 without affecting any others. <br />
