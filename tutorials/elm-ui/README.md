@@ -151,7 +151,6 @@ myElement =
 
 > This is the example in the official `elm-ui` docs:
 https://github.com/mdgriffith/elm-ui <br />
-If you are unable to run the code on your `localhost`
 try the Ellie version: https://ellie-app.com/7vDrXpCckNWa1
 
 In your terminal run:
