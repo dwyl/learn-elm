@@ -97,7 +97,7 @@ In a new directory, initialise your `elm` workflow with the following command:
 elm init
 ```
 
-That will create an `elm.json` file similar to this one:
+That will prompt you to create an `elm.json` file similar to this one:
 [`elm.json`](https://github.com/dwyl/learn-elm/blob/master/tutorials/elm-ui/elm.json)
 
 Next we will add the dependency for `mdgriffith/elm-ui`:
