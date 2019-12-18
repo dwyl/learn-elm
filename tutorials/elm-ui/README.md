@@ -704,7 +704,7 @@ We feel this is a _comparatively small_ price to pay
 given that it means colors can be checked at compile time.
 It allows us to _easily_
 implement a color picker allowing people to easily select _any_ color
-when they are [_categorising_](https://github.com/dwyl/app/issues/235)
+when they are [_categorising_](https://github.com/dwyl/app/issues/235) their thoughts.
 
 ![color-picker-dwyl-teal](https://user-images.githubusercontent.com/194400/70664979-72b49a00-1c63-11ea-80f4-fc533948f60f.png)
 
