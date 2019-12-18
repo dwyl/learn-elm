@@ -231,7 +231,7 @@ they should be familiar to anyone who has read the **Modules** section of the
 In this simple example we are using
 4 out of 9 of the available `elm-ui` modules.
 The one with the most features/functions is
-[`Elemenent`](https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest/Element)
+[`Element`](https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest/Element)
 which contains everything you need for creating standard HTML elements
 including their layout and positioning.
 [`Background`](https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest/Element-Background),
