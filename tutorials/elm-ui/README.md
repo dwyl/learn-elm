@@ -64,7 +64,7 @@ what `elm` is to `JavaScript`,
 a way of making designing web applications fun again!
 `elm-ui` offers compile-time guarantees
 that your layout and styles work as expected.
-You will see _helpful_ compiler errors/warnings
+`elm-ui` will provide you with _helpful_ compiler errors/warnings
 if you attempt to make a _breaking_ change to UI!
 
 
