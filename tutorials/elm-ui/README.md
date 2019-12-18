@@ -239,7 +239,7 @@ including their layout and positioning.
 and
 [`Font`](https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest/Element-Font)
 are _exactly_ what you would expect them to be,
-a collection functions related to styling those properties.
+a collection of functions related to styling those properties.
 We will cover each of these in more detail later on as needed,
 however I encourage you to click the links
 and scroll through available functions
