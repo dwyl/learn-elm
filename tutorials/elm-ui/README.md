@@ -390,7 +390,7 @@ myElement =
         (text "stylish!")
 ```
 
-In this case the **`el`**
+In this case the **`el`** is
 a list with the following attributes:
 
 ```elm
