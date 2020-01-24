@@ -175,7 +175,7 @@ Install the node.js dependencies (`elm` platform):
 ```sh
 npm install
 ```
-> **Note**: We install `elm` (_the `elm' compiler_)
+> **Note**: We install `elm` (_the `elm` compiler_)
 _locally_ for the "_quick-start_".
 If you decide to use it for your own project(s),
 you _can_ install it _globally_ using
