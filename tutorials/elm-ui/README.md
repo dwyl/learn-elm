@@ -573,6 +573,25 @@ This allows us to pinpoint the _single_ `el` in the `row` if we need to.
 <br />
 <hr />
 
+### Using html from Elm
+
+If for any reasons you can't find a situable `elm-ui` functions
+for your use cases, the `Element` module provide the [html](https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest/Element#html)
+and [htmlAttribute](https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest/Element#htmlAttribute).
+
+You can for example create your normal element using the [Html](https://package.elm-lang.org/packages/elm/html/latest/) package
+and convert it to elm-ui `Element`
+
+```elm
+myDiv : Html msg
+myDiv =
+    div [] [text "elm div"]
+
+myElementDiv : Element msg
+myElementDiv =
+    html myDiv
+```
+
 # Want _More_?
 
 If you enjoyed learning the basics of `elm-ui`
