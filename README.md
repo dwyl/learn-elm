@@ -39,8 +39,8 @@ _functional style_ means all your functions are _**predictable**_
 and thus _**very reliable**_. <br />
 No surprises even when you are working with
 a distributed team of dozens of people!
-+ [***Immutable state***](http://softwareengineering.stackexchange.com/questions/235558/what-is-state-mutable-state-and-immutable-state) means there are _fewer_ (_often zero_)
-["_**side effects**_"](http://softwareengineering.stackexchange.com/questions/40297/what-is-a-side-effect)
++ [***Immutable state***](https://softwareengineering.stackexchange.com/questions/235558/what-is-state-mutable-state-and-immutable-state) means there are _fewer_ (_often zero_)
+["_**side effects**_"](https://softwareengineering.stackexchange.com/questions/40297/what-is-a-side-effect)
 + _**Fewer language features**_
 [**_lowers_ cognitive load**](https://blog.prototypr.io/design-principles-for-reducing-cognitive-load-84e82ca61abd)
 when you're reading (_other people's_) code
@@ -48,7 +48,7 @@ when you're reading (_other people's_) code
   + **React** + Redux + Flow + Immutable + Babel + all the other setup code...
   + **Angular 2** + Typescript + Babel + ReactiveX + etc.
   (_bottom line is: elm is `less` to learn_!)
-+ _**Much faster**_ than React.js or Angular 2 in _all_ ["***benchmarks***"](http://elm-lang.org/blog/blazing-fast-html-round-two)
++ _**Much faster**_ than React.js or Angular 2 in _all_ ["***benchmarks***"](https://elm-lang.org/blog/blazing-fast-html-round-two)
 + **Built-in ["_Time Travelling_" Debugger](https://www.youtube.com/watch?v=DSjbTC-hvqQ&feature=youtu.be&list=PLglJM3BYAMPH2zuz1nbKHQyeawE4SN0Cd&t=1633)**
  that lets you record and replay actions in a user session
  (_thus **eliminating** the need for manually
@@ -204,7 +204,7 @@ of your ```elm``` code, it's because ```elm``` is compiled to JavaScript,
 and it's fiddly to have to compile your code manually
 every time you want to see the output. With ```elm reactor```
 this is handled for you. Read more about it here:
-http://elmprogramming.com/elm-reactor.html
+https://elmprogramming.com/elm-reactor.html
 
 
 #### 5. View in Browser
@@ -235,7 +235,7 @@ Please share your thoughts!
 
 The _best_ place to start your elm journey
 is with the (_free_) "_Official Guide_"
-http://guide.elm-lang.org/ <br />
+https://guide.elm-lang.org/ <br />
 
 > At the time of writing, the _entire_ "_Official_" guide to Elm (GitBook)
 (_written Evan Czaplicki, creator of Elm, and improved by the community_)
@@ -284,7 +284,7 @@ Install using NPM with the following command:
 npm install elm -g
 ```
 
-> avoid using [`sudo`](http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo)
+> avoid using [`sudo`](https://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo)
 as you _really_ should be following the
 [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege).
 
@@ -328,7 +328,7 @@ For more advice on `elm` development environment setup: https://github.com/knowt
 ### Language
 
 > Help Wanted summarizing the language features!
-> for now see: http://elm-lang.org/docs/syntax
+> for now see: https://elm-lang.org/docs/syntax
 
 ## Testing
 
@@ -370,7 +370,7 @@ all =
 More info on testing can be found at
 [testing in elm](https://medium.com/@_rchaves_/testing-in-elm-93ad05ee1832#.3i3ibxcxz)
 and
-[elm community](http://package.elm-lang.org/packages/elm-community/elm-test/2.1.0).
+[elm community](https://package.elm-lang.org/packages/elm-community/elm-test/2.1.0).
 
 ## Continuous Integration
 
@@ -401,16 +401,16 @@ https://github.com/isRuslan/awesome-elm
 
 ### Selected Articles (_Our Favourites_)
 
-+ How to use Elm at work: http://elm-lang.org/blog/how-to-use-elm-at-work
++ How to use Elm at work: https://elm-lang.org/blog/how-to-use-elm-at-work
 (_or work for DWYL where you're actively encouraged to use it!_)
 + JavaScript interoperability: https://guide.elm-lang.org/interop/
-+ How to add Elm to _existing_ JS codebase: http://tech.noredink.com/post/126978281075/walkthrough-introducing-elm-to-a-js-web-app
++ How to add Elm to _existing_ JS codebase: https://tech.noredink.com/post/126978281075/walkthrough-introducing-elm-to-a-js-web-app
 + How Elm made our work better (_success story_):
-http://futurice.com/blog/elm-in-the-real-world
+https://futurice.com/blog/elm-in-the-real-world
 
 ### General Functional Programming (background reading)
 
-+ Objects Should Be Immutable: http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html
++ Objects Should Be Immutable: https://www.yegor256.com/2014/06/09/objects-should-be-immutable.html
 
 ### Further reading
 
@@ -439,7 +439,7 @@ so that the user can navigate back to the same view as they please.
 
 ### Promising but _incomplete_:
 
-+ Learn You an `Elm` http://learnyouanelm.github.io/
++ Learn You an `Elm` https://learnyouanelm.github.io/
 (_lots of "Todo" items and last updated about a year go_)
 
-[![HitCount](http://hits.dwyl.io/dwyl/learn-elm.svg)](http://hits.dwyl.io/dwyl/learn-elm)
+[![HitCount](https://hits.dwyl.io/dwyl/learn-elm.svg)](http://hits.dwyl.io/dwyl/learn-elm)
