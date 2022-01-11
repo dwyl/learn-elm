@@ -442,4 +442,4 @@ so that the user can navigate back to the same view as they please.
 + Learn You an `Elm` https://learnyouanelm.github.io/
 (_lots of "Todo" items and last updated about a year go_)
 
-[![HitCount](https://hits.dwyl.io/dwyl/learn-elm.svg)](http://hits.dwyl.io/dwyl/learn-elm)
+[![HitCount](https://hits.dwyl.com/dwyl/learn-elm.svg)](http://hits.dwyl.com/dwyl/learn-elm)
