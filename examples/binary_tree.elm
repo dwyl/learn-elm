@@ -131,7 +131,7 @@ Exercises:
 
 (7) Try experimenting with different ways to traverse a
     tree: pre-order, in-order, post-order, depth-first, etc.
-    More info at: http://en.wikipedia.org/wiki/Tree_traversal
+    More info at: https://en.wikipedia.org/wiki/Tree_traversal
 
 -----------------------------------------------------------------}
 

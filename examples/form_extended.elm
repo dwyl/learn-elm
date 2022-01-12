@@ -1,5 +1,5 @@
 -- Implementation of the Exercises for the Forms section of the Elm Architecture Tutotial
--- http://guide.elm-lang.org/architecture/user_input/forms.html
+-- https://guide.elm-lang.org/architecture/user_input/forms.html
 -- Elm Version 0.18
 
 
@@ -13,7 +13,7 @@ import Html.Events exposing (onClick, onInput)
 import String
 
 
--- see: http://package.elm-lang.org/packages/elm-lang/core/latest/Char
+-- see: https://package.elm-lang.org/packages/elm-lang/core/latest/Char
 
 
 main =

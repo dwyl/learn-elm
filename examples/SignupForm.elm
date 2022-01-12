@@ -79,4 +79,4 @@ main =
         , subscriptions = \_ -> Sub.none
         }
 
--- see: http://tech.noredink.com/post/129641182738/building-a-live-validated-signup-form-in-elm
+-- see: https://tech.noredink.com/post/129641182738/building-a-live-validated-signup-form-in-elm
