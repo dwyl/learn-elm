@@ -6,7 +6,7 @@ module FizzBuzz exposing (..)
 
 -- Import Html module exposing to this context all functions inside that module
 -- this means, we can call its functions without having to prepend the name of the module
--- so we can call [text](http://package.elm-lang.org/packages/elm-lang/html/2.0.0/Html#text)
+-- so we can call [text](https://package.elm-lang.org/packages/elm-lang/html/2.0.0/Html#text)
 -- just using the name function 'text' instead of 'Html.text'
 
 import Html exposing (..)
