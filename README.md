@@ -81,7 +81,7 @@ These are a _few_ of [our **_favourite_ things**](https://youtu.be/0IagRZBvLtw).
 the `elm-architecture` and `elm-platform` are to web development right now! The fact that Dan Abramov was "_inspired_" by Elm (architecture and debugger) for Redux and React Hot-Reloader
 respectively, should tell you that there's "_something_" here worth exploring ...
 
-### Great Video Intro to Elm (_by Jessic Kerr_)
+### Great Video Intro to Elm (_by Jessica Kerr_)
 
 We _highly_ recommend watching Jessica Kerr's
 "***Adventures in Elm***" from GOTO Conference 2016:
