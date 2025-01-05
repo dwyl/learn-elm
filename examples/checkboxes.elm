@@ -23,7 +23,7 @@ type alias Model =
 
 init : Model
 init =
-    Model True True True
+    Model False False False
 
 
 
